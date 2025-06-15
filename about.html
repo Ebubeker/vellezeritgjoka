@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en" id="html-root">
     <head>
         <!-- Meta -->
         <meta charset="utf-8">
@@ -32,6 +32,52 @@
         <link rel="stylesheet" href="css/magnific-popup.css">
         <!-- Main Custom Css -->
         <link href="css/custom.css" rel="stylesheet" media="screen">
+
+        <style>
+            .language-switcher {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 0 20px;
+            }
+            
+            .language-switcher button {
+                background: none;
+                border: 2px solid #4CAF50;
+                color: #4CAF50;
+                padding: 5px 12px;
+                border-radius: 20px;
+                cursor: pointer;
+                font-size: 12px;
+                font-weight: 600;
+                text-transform: uppercase;
+                transition: all 0.3s ease;
+            }
+            
+            .language-switcher button:hover,
+            .language-switcher button.active {
+                background: #4CAF50;
+                color: white;
+            }
+            
+            .language-switcher span {
+                color: #666;
+                font-size: 12px;
+            }
+            
+            @media (max-width: 991px) {
+                .language-switcher {
+                    margin-left: 0;
+                    margin-top: 15px;
+                    justify-content: center;
+                }
+            }
+            
+            [lang]:not([lang="en"]) .en-text,
+            [lang]:not([lang="sq"]) .sq-text {
+                display: none;
+            }
+        </style>
     </head>
     <body>
 
@@ -60,23 +106,57 @@
                         <div class="collapse navbar-collapse main-menu">
                             <div class="nav-menu-wrapper">
                                 <ul class="navbar-nav mr-auto" id="menu">
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="./">Home</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="gallery.html">Gallery</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="about.html">About</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="contact.html">Contact</a></li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./">
+                                            <span class="en-text">Home</span>
+                                            <span
+                                                class="sq-text">Kryefaqja</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="gallery.html">
+                                            <span class="en-text">Gallery</span>
+                                            <span class="sq-text">Galeria</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about.html">
+                                            <span class="en-text">About</span>
+                                            <span class="sq-text">Rreth
+                                                Nesh</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contact.html">
+                                            <span class="en-text">Contact</span>
+                                            <span class="sq-text">Kontakt</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
+
+                            <!-- Language Switcher Start -->
+                            <div class="language-switcher">
+                                <button onclick="switchLanguage('en')"
+                                    id="en-btn" class="active">EN</button>
+                                <span>|</span>
+                                <button onclick="switchLanguage('sq')"
+                                    id="sq-btn">SQ</button>
+                            </div>
+                            <!-- Language Switcher End -->
+
                             <!-- Contact Now Box Start -->
                             <div class="contact-now-box d-inline-flex">
                                 <div class="icon-box">
                                     <img src="images/icon-phone.svg" alt>
                                 </div>
                                 <div class="contact-now-box-content">
-                                    <p>call us any time</p>
+                                    <p>
+                                        <span class="en-text">call us any
+                                            time</span>
+                                        <span class="sq-text">na telefononi çdo
+                                            kohë</span>
+                                    </p>
                                     <h3>(+01) 789 987 645</h3>
                                 </div>
                             </div>
@@ -99,13 +179,26 @@
                         <!-- Page Header Box Start -->
                         <div class="page-header-box">
                             <h1 class="text-anime-style-2"
-                                data-cursor="-opaque">About <span>Us</span></h1>
+                                data-cursor="-opaque">
+                                <span class="en-text">About
+                                    <span>Us</span></span>
+                                <span class="sq-text">Rreth
+                                    <span>Nesh</span></span>
+                            </h1>
                             <nav class="wow fadeInUp">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a
-                                            href="./">home</a></li>
+                                    <li class="breadcrumb-item">
+                                        <a href="./">
+                                            <span class="en-text">home</span>
+                                            <span
+                                                class="sq-text">kryefaqja</span>
+                                        </a>
+                                    </li>
                                     <li class="breadcrumb-item active"
-                                        aria-current="page">about us</li>
+                                        aria-current="page">
+                                        <span class="en-text">about us</span>
+                                        <span class="sq-text">rreth nesh</span>
+                                    </li>
                                 </ol>
                             </nav>
                         </div>
@@ -115,6 +208,7 @@
             </div>
         </div>
         <!-- Page Header End -->
+
         <!-- Our Counter Section Start -->
         <div class="our-counter">
             <div class="container-fluid">
@@ -133,7 +227,12 @@
                                     <div class="counter-item-content">
                                         <h2><span
                                                 class="counter">320</span>+</h2>
-                                        <p>total services</p>
+                                        <p>
+                                            <span class="en-text">total
+                                                services</span>
+                                            <span class="sq-text">shërbime
+                                                totale</span>
+                                        </p>
                                     </div>
                                 </div>
                                 <!-- Counter Item End -->
@@ -146,8 +245,13 @@
                                     </div>
                                     <div class="counter-item-content">
                                         <h2><span
-                                                class="counter">250</span>+</h2>
-                                        <p>total team member</p>
+                                                class="counter">20</span>+</h2>
+                                        <p>
+                                            <span class="en-text">total team
+                                                members</span>
+                                            <span class="sq-text">anëtarë ekipi
+                                                gjithsej</span>
+                                        </p>
                                     </div>
                                 </div>
                                 <!-- Counter Item End -->
@@ -160,8 +264,13 @@
                                     </div>
                                     <div class="counter-item-content">
                                         <h2><span
-                                                class="counter">100</span>+</h2>
-                                        <p>total awards</p>
+                                                class="counter">15</span>+</h2>
+                                        <p>
+                                            <span class="en-text">total
+                                                awards</span>
+                                            <span class="sq-text">çmime
+                                                gjithsej</span>
+                                        </p>
                                     </div>
                                 </div>
                                 <!-- Counter Item End -->
@@ -171,7 +280,8 @@
                             <!-- Counter Image Start -->
                             <div class="counter-image">
                                 <figure class="image-anime">
-                                    <img src="https://scontent.ftia12-1.fna.fbcdn.net/v/t39.30808-6/468845472_18078158671578459_1200233417186650456_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEuu4YTFqXVkExxK2pbrjddC2YZ2VrJOqYLZhnZWsk6poxXHXfsReLNKB9ZES--6bCZBwhSpKiEs0Pa4OSDI5Qe&_nc_ohc=QULATR88byIQ7kNvwHyMCP_&_nc_oc=AdnYtRpeJx79-OUIN64kxUBS3xZqGq8VqRMmhe2tRetB7-w0M-BpDtCXZR0rYYU2OJM&_nc_zt=23&_nc_ht=scontent.ftia12-1.fna&_nc_gid=0IVs1N_tFK3HZB7a4rVqEg&oh=00_AfKpNpYTF2EYEFH9eh7UFk_fDvQ7q0sXy8gfn-clXwl-Vg&oe=6841E750" height="200px" alt>
+                                    <img src="images/transport.jpg"
+                                        height="200px" alt>
                                 </figure>
                             </div>
                             <!-- Counter Image End -->
@@ -192,7 +302,7 @@
                         <!-- Our Vision Image Start -->
                         <div class="our-vision-image">
                             <figure class="image-anime reveal">
-                                <img src="https://scontent.ftia12-1.fna.fbcdn.net/v/t39.30808-6/468920786_18078157237578459_8686547534503166954_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEm6ZiBk2ud9n_WY3RlbiHJk4WKfWnukMeThYp9ae6QxxbQ5VMMGpRY955oOKDzJXcc4fndZ4yvjgDaM6anRyDe&_nc_ohc=ZU0Tb3UKG2MQ7kNvwExHe0T&_nc_oc=AdljsceT2x8VaB9sN1XNlo6J6HFS2-udYWNLB0Biqy9lIMn275crSLWDACb4vjssxWI&_nc_zt=23&_nc_ht=scontent.ftia12-1.fna&_nc_gid=d9JL-UiyffrMME4RKPhwCA&oh=00_AfLCLd9UDVWxbTAqe9S9stQ1D1LIgwg4pxNfRzxuVQ82rQ&oe=6841D520" alt>
+                                <img src="images/ourmission1.jpg" alt>
                             </figure>
                         </div>
                         <!-- Our Vision Image End -->
@@ -204,21 +314,22 @@
                             <!-- Section Title Start -->
                             <div class="section-title">
                                 <h2 class="text-anime-style-2"
-                                    data-cursor="-opaque">Beautiful <span>and
-                                        Sustainable Garden Spaces</span></h2>
-                                <p class="wow fadeInUp"
-                                    data-wow-delay="0.25s">Our mission is to
-                                    design and create beautiful, sustainable
-                                    gardens that enhance your outdoor living
-                                    space while respecting the environment.</p>
-                                <p class="wow fadeInUp" data-wow-delay="0.5s">We
-                                    are committed to quality, innovation, and
-                                    eco-friendly practices to ensure your garden
-                                    thrives for years to come. Through
-                                    eco-friendly practices and careful planning,
-                                    we ensure your garden not only looks
-                                    stunning but also thrives for years to
-                                    come.</p>
+                                    data-cursor="-opaque">
+                                    <span class="en-text">Beautiful <span>and
+                                            Sustainable Garden
+                                            Spaces</span></span>
+                                    <span class="sq-text">Hapësira të Bukura
+                                        <span>dhe të Qëndrueshme
+                                            Kopshti</span></span>
+                                </h2>
+                                <p class="wow fadeInUp" data-wow-delay="0.25s">
+                                    <span class="en-text">Our mission is to transform ordinary outdoor spaces into extraordinary gardens that bring joy, beauty, and tranquility to your daily life. We believe every space has potential, regardless of size or condition.</span>
+                                    <span class="sq-text">Misioni ynë është të transformojmë hapësira të zakonshme të jashtme në kopshte të jashtëzakonshëm që sjellin gëzim, bukuri dhe qetësi në jetën tuaj të përditshme. Ne besojmë se çdo hapësirë ka potencial, pavarësisht nga madhësia apo gjendja.</span>
+                                </p>
+                                <p class="wow fadeInUp" data-wow-delay="0.5s">
+                                    <span class="en-text">We are committed to sustainable practices, quality craftsmanship, and personalized service. Through careful plant selection, innovative design solutions, and eco-friendly maintenance practices, we ensure your garden not only looks stunning but also contributes positively to the environment while requiring minimal upkeep.</span>
+                                    <span class="sq-text">Ne jemi të përkushtuar ndaj praktikave të qëndrueshme, artizanatit cilësor dhe shërbimit të personalizuar. Përmes zgjedhjes së kujdesshme të bimëve, zgjidhjeve inovative të dizajnit dhe praktikave miqësore me mjedisin të mirëmbajtjes, sigurojmë që kopshti juaj jo vetëm të duket mahnitës por edhe të kontribuojë pozitivisht në mjedis duke kërkuar mirëmbajtje minimale.</span>
+                                </p>
                             </div>
                             <!-- Section Title End -->
                         </div>
@@ -233,7 +344,7 @@
                         <!-- Our Mission Image Start -->
                         <div class="our-mission-image">
                             <figure class="image-anime reveal">
-                                <img src="https://scontent.ftia12-1.fna.fbcdn.net/v/t39.30808-6/470152555_1280853313258281_8516717870999056051_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=3a1ebe&_nc_eui2=AeHxV5bQE4-Myc5dAVN35KpBKMoNgjakJB4oyg2CNqQkHmHyGgPmBx6lUqJtzFMm3yZzmfIE-axXPX2qf6dnTDjZ&_nc_ohc=yDrYxQq69tgQ7kNvwFsn4N_&_nc_oc=AdmRgoQ47QK84Y-UEin_PxSB_1PKvmT26PpiZkushxgZ-HTafcqfXIXa5dYCc_BTgXY&_nc_zt=23&_nc_ht=scontent.ftia12-1.fna&_nc_gid=H50IXVRKpHCVT7PGqMJOkA&oh=00_AfIrthroeUtPCDIUtifjswcLCJkDH5NkmLP_aJK96wjTpA&oe=6841BC09" alt>
+                                <img src="images/ourmission2.jpg" alt>
                             </figure>
                         </div>
                         <!-- Our Mission Image End -->
@@ -245,21 +356,20 @@
                             <!-- Section Title Start -->
                             <div class="section-title">
                                 <h2 class="text-anime-style-2"
-                                    data-cursor="-opaque">Beautiful,
-                                    <span>Sustainable Gardens</span></h2>
-                                <p class="wow fadeInUp"
-                                    data-wow-delay="0.25s">Our vision is to
-                                    create stunning, sustainable garden spaces
-                                    that enhance your lifestyle and respect the
-                                    environment.</p>
-                                <p class="wow fadeInUp" data-wow-delay="0.5s">We
-                                    aim to blend beauty and functionality, using
-                                    eco-friendly practices and innovative
-                                    designs to transform your outdoor area into
-                                    a serene retreat.Our goal is to transform
-                                    your outdoor area into a serene,
-                                    environmentally responsible retreat that you
-                                    can enjoy for years to come.</p>
+                                    data-cursor="-opaque">
+                                    <span class="en-text">Beautiful,
+                                        <span>Sustainable Gardens</span></span>
+                                    <span class="sq-text">Kopshte të Bukur,
+                                        <span>të Qëndrueshëm</span></span>
+                                </h2>
+                                <p class="wow fadeInUp" data-wow-delay="0.25s">
+                                    <span class="en-text">Our vision is to create outdoor living spaces that seamlessly blend with your lifestyle, providing areas for relaxation, entertainment, and connection with nature. Every garden we design reflects the unique personality and needs of our clients.</span>
+                                    <span class="sq-text">Vizioni ynë është të krijojmë hapësira jetese të jashtme që bashkohen pa probleme me stilin tuaj të jetesës, duke ofruar zona për relaksim, argëtim dhe lidhje me natyrën. Çdo kopsht që dizajnojmë reflekton personalitetin dhe nevojat unike të klientëve tanë.</span>
+                                </p>
+                                <p class="wow fadeInUp" data-wow-delay="0.5s">
+                                    <span class="en-text">We aim to be the leading garden design and maintenance company, known for our creativity, reliability, and commitment to excellence. Through innovative design approaches and sustainable practices, we strive to create gardens that not only meet today's needs but continue to evolve and thrive for generations to come.</span>
+                                    <span class="sq-text">Ne synojmë të jemi kompania kryesuese e dizajnit dhe mirëmbajtjes së kopshteve, e njohur për kreativitetin, besueshmërinë dhe përkushtimin tonë ndaj përsosmërisë. Përmes qasjeve inovative të dizajnit dhe praktikave të qëndrueshme, përpiqemi të krijojmë kopshte që jo vetëm plotësojnë nevojat e sotme por vazhdojnë të evoluojnë dhe lulëzojnë për breza me radhë.</span>
+                                </p>
                             </div>
                             <!-- Section Title End -->
                         </div>
@@ -271,6 +381,7 @@
         </div>
         <!-- Our Vision Mission Section End -->
 
+        <!-- Why Choose Us Section Start -->
         <div class="why-choose-us">
             <div class="container">
                 <div class="row align-items-center">
@@ -278,9 +389,7 @@
                         <!-- Why choose Image Start -->
                         <div class="why-choose-image">
                             <figure>
-                                <img
-                                    src="https://scontent.ftia21-1.fna.fbcdn.net/v/t39.30808-6/470140173_1280846119925667_8120147181777344557_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=VMS82Em9EWIQ7kNvwH2kO3N&_nc_oc=AdlFWn1m_EIiwB0Y8rfPYjdYKRkxeIRtcgYBYGkSaofnNQ-1fo8dI_krnFZvRcqvMy4&_nc_zt=23&_nc_ht=scontent.ftia21-1.fna&_nc_gid=XyKs1O_jv6IvQNslzbz2oQ&oh=00_AfI1wX8tyRzqjQnfxGbXoeRgKzybmfd5q5Zo3uGHr7SCmg&oe=68392AA0"
-                                    alt>
+                                <img src="images/transport.jpg" alt>
                             </figure>
                         </div>
                         <!-- Why choose Image End -->
@@ -292,14 +401,27 @@
                             <!-- Section Title Start -->
                             <div class="section-title">
                                 <h2 class="text-anime-style-2"
-                                    data-cursor="-opaque">Why choose us
-                                    <span>for your landscaping
-                                        needs?</span></h2>
-                                <p class="wow fadeInUp"
-                                    data-wow-delay="0.25s">Choose us for expert
-                                    landscaping: personalized designs, quality
-                                    craftsmanship, and dedicated service to make
-                                    your outdoor space exceptional.</p>
+                                    data-cursor="-opaque">
+                                    <span class="en-text">Why choose us
+                                        <span>for your landscaping
+                                            needs?</span></span>
+                                    <span class="sq-text">Pse të na zgjidhni
+                                        <span>për nevojat tuaja të
+                                            peizazhit?</span></span>
+                                </h2>
+                                <p class="wow fadeInUp" data-wow-delay="0.25s">
+                                    <span class="en-text">Choose us for expert
+                                        landscaping: personalized designs,
+                                        quality craftsmanship, and dedicated
+                                        service to make your outdoor space
+                                        exceptional.</span>
+                                    <span class="sq-text">Na zgjidhni për
+                                        peizazh eksperte: dizajne të
+                                        personalizuara, artizanate cilësore, dhe
+                                        shërbim të dedikuar për ta bërë
+                                        hapësirën tuaj të jashtme të
+                                        jashtëzakonshme.</span>
+                                </p>
                             </div>
                             <!-- Section Title End -->
 
@@ -313,24 +435,46 @@
                                             alt>
                                     </div>
                                     <div class="why-choose-item-content">
-                                        <h3>expertise & experience</h3>
-                                        <p>Years of expertise in crafting
-                                            beautiful gardens.</p>
+                                        <h3>
+                                            <span class="en-text">expertise &
+                                                experience</span>
+                                            <span class="sq-text">ekspertizë &
+                                                përvojë</span>
+                                        </h3>
+                                        <p>
+                                            <span class="en-text">Years of
+                                                expertise in crafting beautiful
+                                                gardens.</span>
+                                            <span class="sq-text">Vite
+                                                ekspertize në krijimin e
+                                                kopshteve të bukura.</span>
+                                        </p>
                                     </div>
                                 </div>
                                 <!-- Why choose Item End -->
 
                                 <!-- Why choose Item Start -->
                                 <div class="why-choose-item wow fadeInUp"
-                                    data-wow-delay="0.5s">
+                                    data-wow-delay="0.75s">
                                     <div class="icon-box">
                                         <img src="images/icon-why-choose-2.svg"
                                             alt>
                                     </div>
                                     <div class="why-choose-item-content">
-                                        <h3>high-ouality craftsmanship</h3>
-                                        <p>Top-notch craftsmanship with premium
-                                            materials and attention.</p>
+                                        <h3>
+                                            <span class="en-text">high-quality
+                                                craftsmanship</span>
+                                            <span class="sq-text">artizanat
+                                                cilësor</span>
+                                        </h3>
+                                        <p>
+                                            <span class="en-text">Top-notch
+                                                craftsmanship with premium
+                                                materials and attention.</span>
+                                            <span class="sq-text">Artizanat i
+                                                shkëlqyer me materiale premium
+                                                dhe vëmendje.</span>
+                                        </p>
                                     </div>
                                 </div>
                                 <!-- Why choose Item End -->
@@ -354,16 +498,20 @@
                             <!-- Footer Logo Start -->
                             <div class="footer-logo">
                                 <img src="images/gjoka.png" alt="Logo"
-                                    width="60"
-                                    height="55"> <span
-                                    class="logo-text">oka</span>
+                                    width="60" height="55">
+                                <span class="logo-text">oka</span>
                             </div>
                             <!-- Footer Logo End -->
 
                             <!-- About Footer Content Start -->
                             <div class="about-footer-content">
-                                <p>Explore our curated collection of seeds and
-                                    plants.</p>
+                                <p>
+                                    <span class="en-text">Explore our curated
+                                        collection of seeds and plants.</span>
+                                    <span class="sq-text">Eksploroni koleksionin
+                                        tonë të kuruar të farave dhe
+                                        bimëve.</span>
+                                </p>
                             </div>
                             <!-- Footer Social Links Start -->
                             <div class="footer-social-links">
@@ -377,7 +525,6 @@
                                 </ul>
                             </div>
                             <!-- Footer Social Links End -->
-
                         </div>
                         <!-- About Footer End -->
                     </div>
@@ -385,12 +532,36 @@
                     <div class="col-lg-3 col-md-4 col-6">
                         <!-- About Links Start -->
                         <div class="footer-links">
-                            <h3>explore</h3>
+                            <h3>
+                                <span class="en-text">explore</span>
+                                <span class="sq-text">eksploro</span>
+                            </h3>
                             <ul>
-                                <li><a href="index.html">home</a></li>
-                                <li><a href="gallery.html">gallery</a></li>
-                                <li><a href="about.html">about us</a></li>
-                                <li><a href="contact.html">contact us</a></li>
+                                <li>
+                                    <a href="index.html">
+                                        <span class="en-text">home</span>
+                                        <span class="sq-text">kryefaqja</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="gallery.html">
+                                        <span class="en-text">gallery</span>
+                                        <span class="sq-text">galeria</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="about.html">
+                                        <span class="en-text">about us</span>
+                                        <span class="sq-text">rreth nesh</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">
+                                        <span class="en-text">contact us</span>
+                                        <span class="sq-text">na
+                                            kontaktoni</span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <!-- About Links End -->
@@ -399,9 +570,15 @@
                     <div class="col-lg-3 col-md-4 col-6">
                         <!-- Working Hours Start -->
                         <div class="working-hour">
-                            <h3>working hours</h3>
+                            <h3>
+                                <span class="en-text">working hours</span>
+                                <span class="sq-text">orët e punës</span>
+                            </h3>
                             <div class="working-hour-box">
-                                <p>Monday - Sunday</p>
+                                <p>
+                                    <span class="en-text">Monday - Sunday</span>
+                                    <span class="sq-text">E Hënë - E Diel</span>
+                                </p>
                                 <p>07.00 - 23.00</p>
                             </div>
                         </div>
@@ -413,14 +590,25 @@
                         <div class="footer-contact">
                             <!-- Footer Info Box Start -->
                             <div class="footer-info-box">
-                                <h3>address</h3>
-                                <p>Fushë Krujë, Albania</p>
+                                <h3>
+                                    <span class="en-text">address</span>
+                                    <span class="sq-text">adresa</span>
+                                </h3>
+                                <p>
+                                    <span class="en-text">Fushë Krujë,
+                                        Albania</span>
+                                    <span class="sq-text">Fushë Krujë,
+                                        Shqipëri</span>
+                                </p>
                             </div>
                             <!-- Footer Info Box End -->
 
                             <!-- Footer Info Box Start -->
                             <div class="footer-info-box">
-                                <h3>contact</h3>
+                                <h3>
+                                    <span class="en-text">contact</span>
+                                    <span class="sq-text">kontakt</span>
+                                </h3>
                                 <p>(+355) 68 203 4333</p>
                                 <p>andigjokashpk@gmail.com</p>
                             </div>
@@ -436,7 +624,12 @@
                         <div class="col-lg-6 col-md-6">
                             <!-- Footer Copyright Start -->
                             <div class="footer-copyright-text">
-                                <p>© Gjoka. All Rights Reserved.</p>
+                                <p>
+                                    <span class="en-text">© Gjoka. All Rights
+                                        Reserved.</span>
+                                    <span class="sq-text">© Gjoka. Të gjitha të
+                                        drejtat të rezervuara.</span>
+                                </p>
                             </div>
                             <!-- Footer Copyright End -->
                         </div>
@@ -457,6 +650,37 @@
             </div>
         </footer>
         <!-- Footer End -->
+
+        <!-- Language Switch Script -->
+        <script>
+            // Language switching functionality
+            function switchLanguage(lang) {
+                const htmlRoot = document.getElementById('html-root');
+                const enBtn = document.getElementById('en-btn');
+                const sqBtn = document.getElementById('sq-btn');
+                
+                // Set the language attribute
+                htmlRoot.setAttribute('lang', lang);
+                
+                // Update button states
+                if (lang === 'en') {
+                    enBtn.classList.add('active');
+                    sqBtn.classList.remove('active');
+                } else {
+                    sqBtn.classList.add('active');
+                    enBtn.classList.remove('active');
+                }
+                
+                // Save language preference to localStorage
+                localStorage.setItem('preferred-language', lang);
+            }
+            
+            // Load saved language preference on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                const savedLang = localStorage.getItem('preferred-language') || 'en';
+                switchLanguage(savedLang);
+            });
+        </script>
 
         <!-- Jquery Library File -->
         <script src="js/jquery-3.7.1.min.js"></script>

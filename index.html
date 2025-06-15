@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en" id="html-root">
     <head>
         <!-- Meta -->
         <meta charset="utf-8">
@@ -32,6 +32,52 @@
         <link rel="stylesheet" href="css/magnific-popup.css">
         <!-- Main Custom Css -->
         <link href="css/custom.css" rel="stylesheet" media="screen">
+        
+        <style>
+            .language-switcher {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 0 20px;
+            }
+            
+            .language-switcher button {
+                background: none;
+                border: 2px solid #4CAF50;
+                color: #4CAF50;
+                padding: 5px 12px;
+                border-radius: 20px;
+                cursor: pointer;
+                font-size: 12px;
+                font-weight: 600;
+                text-transform: uppercase;
+                transition: all 0.3s ease;
+            }
+            
+            .language-switcher button:hover,
+            .language-switcher button.active {
+                background: #4CAF50;
+                color: white;
+            }
+            
+            .language-switcher span {
+                color: #666;
+                font-size: 12px;
+            }
+            
+            @media (max-width: 991px) {
+                .language-switcher {
+                    margin-left: 0;
+                    margin-top: 15px;
+                    justify-content: center;
+                }
+            }
+            
+            [lang]:not([lang="en"]) .en-text,
+            [lang]:not([lang="sq"]) .sq-text {
+                display: none;
+            }
+        </style>
     </head>
     <body>
 
@@ -60,23 +106,51 @@
                         <div class="collapse navbar-collapse main-menu">
                             <div class="nav-menu-wrapper">
                                 <ul class="navbar-nav mr-auto" id="menu">
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="./">Home</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="gallery.html">Gallery</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="about.html">About</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="contact.html">Contact</a></li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./">
+                                            <span class="en-text">Home</span>
+                                            <span class="sq-text">Kryefaqja</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="gallery.html">
+                                            <span class="en-text">Gallery</span>
+                                            <span class="sq-text">Galeria</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about.html">
+                                            <span class="en-text">About</span>
+                                            <span class="sq-text">Rreth Nesh</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contact.html">
+                                            <span class="en-text">Contact</span>
+                                            <span class="sq-text">Kontakt</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
+                            
+                            <!-- Language Switcher Start -->
+                            <div class="language-switcher">
+                                <button onclick="switchLanguage('en')" id="en-btn" class="active">EN</button>
+                                <span>|</span>
+                                <button onclick="switchLanguage('sq')" id="sq-btn">SQ</button>
+                            </div>
+                            <!-- Language Switcher End -->
+                            
                             <!-- Contact Now Box Start -->
                             <div class="contact-now-box d-inline-flex">
                                 <div class="icon-box">
                                     <img src="images/icon-phone.svg" alt>
                                 </div>
                                 <div class="contact-now-box-content">
-                                    <p>call us any time</p>
+                                    <p>
+                                        <span class="en-text">call us any time</span>
+                                        <span class="sq-text">na telefononi çdo kohë</span>
+                                    </p>
                                     <h3>(+01) 789 987 645</h3>
                                 </div>
                             </div>
@@ -115,25 +189,26 @@
                         <div class="hero-content">
                             <!-- Section Title Start -->
                             <div class="section-title">
-                                <h3 class="wow fadeInUp">beautiful garden</h3>
-                                <h1 class="text-anime-style-2"
-                                    data-cursor="-opaque"><span>Pasioni
-                                        per</span> Natyren!</h1>
-                                <p class="wow fadeInUp"
-                                    data-wow-delay="0.25s">Whether you're
-                                    dreaming of a vibrant garden, a serene
-                                    patio, or a functional outdoor living space,
-                                    our team of skilled landscapers and
-                                    gardeners is here to bring your vision to
-                                    life. Let's create a landscape you'll
-                                    love.</p>
+                                <h3 class="wow fadeInUp">
+                                    <span class="en-text">beautiful garden</span>
+                                    <span class="sq-text">kopsht i bukur</span>
+                                </h3>
+                                <h1 class="text-anime-style-2" data-cursor="-opaque">
+                                    <span class="en-text"><span>Passion for</span> Nature!</span>
+                                    <span class="sq-text"><span>Pasioni per</span> Natyren!</span>
+                                </h1>
+                                <p class="wow fadeInUp" data-wow-delay="0.25s">
+                                    <span class="en-text">With over 20 years of experience, Gjoka Gardens brings your outdoor vision to life. From intimate garden retreats to expansive landscape installations, we create beautiful, functional spaces that enhance your property and lifestyle.</span>
+                                    <span class="sq-text">Me mbi 20 vite përvojë, Gjoka Gardens e sjell vizionin tuaj të jashtëm në jetë. Nga kopshte të vogla intime deri te instalime të gjera peizazhi, ne krijojmë hapësira të bukura dhe funksionale që përmirësojnë pronën dhe stilin tuaj të jetesës.</span>
+                                </p>
                             </div>
                             <!-- Section Title End -->
 
-                            <div class="hero-content-body wow fadeInUp"
-                                data-wow-delay="0.5s">
-                                <a href="gallery.html"
-                                    class="btn-default">Checkout Gallery</a>
+                            <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
+                                <a href="gallery.html" class="btn-default">
+                                    <span class="en-text">Checkout Gallery</span>
+                                    <span class="sq-text">Shiko Galerinë</span>
+                                </a>
                             </div>
                         </div>
                         <!-- Hero Content End -->
@@ -153,9 +228,7 @@
                             <!-- About Image Start -->
                             <div class="about-img-1">
                                 <figure class="image-anime reveal">
-                                    <img
-                                        src="https://scontent.fbeg5-1.fna.fbcdn.net/v/t51.75761-15/491441659_18091707208578459_1652861873941184513_n.jpg?stp=dst-jpegr_tt6&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LLT57fPkPmwQ7kNvwFzbpEX&_nc_oc=AdnWR2C3PbzuAqQblbFxKR2Pp2j6dIZtZ3uw_U2p5ciFA0Pli3qkiRQ5JuazwIp1r3o&_nc_zt=23&se=-1&_nc_ht=scontent.fbeg5-1.fna&_nc_gid=_FBAlHBkE8Z2EWWEGR9Xtg&oh=00_AfI65URbA6a8y9sYZYaDr8fuJTBYq6f_vQwURsaZCvpZaw&oe=6837D98D"
-                                        alt>
+                                    <img src="/images/about1.jpg" alt>
                                 </figure>
                             </div>
                             <!-- About Image End -->
@@ -163,9 +236,7 @@
                             <!-- About Image Start -->
                             <div class="about-img-2">
                                 <figure class="image-anime reveal">
-                                    <img
-                                        src="https://scontent.fbeg5-1.fna.fbcdn.net/v/t51.75761-15/491432083_18091356109578459_8389742170880882648_n.jpg?stp=dst-jpegr_tt6&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RHYRc8Ap1NAQ7kNvwEGCRRm&_nc_oc=Adl1zT_6vNOLMA8TsS4xGSMGBKQQuu_jhCcXNiBiol12arHUwHUkK0PDrw2aSxG2Rzc&_nc_zt=23&se=-1&_nc_ht=scontent.fbeg5-1.fna&_nc_gid=qgOKJfq4eUTIJQ3CaDngzA&oh=00_AfI2A77yJBLXZxcOQ8E1yJjPKGAWks0flxARlali8Oy-mA&oe=6837B41C"
-                                        alt>
+                                    <img src="/images/about2.jpg" alt>
                                 </figure>
                             </div>
                             <!-- About Image End -->
@@ -176,7 +247,10 @@
                                     <h2><span class="counter">20</span>+</h2>
                                 </div>
                                 <div class="company-experience-content">
-                                    <p>years of experience</p>
+                                    <p>
+                                        <span class="en-text">years of experience</span>
+                                        <span class="sq-text">Vite <br> experience</span>
+                                    </p>
                                 </div>
                             </div>
                             <!-- Company Experience End -->
@@ -189,27 +263,36 @@
                         <div class="about-us-content">
                             <!-- Section Title Start -->
                             <div class="section-title">
-                                <h2 class="text-anime-style-2"
-                                    data-cursor="-opaque">Sowing dreams<span>,
-                                        growing landscapes</span></h2>
-                                <p class="wow fadeInUp"
-                                    data-wow-delay="0.25s">We transform your
-                                    landscaping dreams into reality, crafting
-                                    beautiful, tranquil outdoor spaces that
-                                    reflect your vision and enhance your
-                                    lifestyle. Let us grow beauty and joy in
-                                    every garden.</p>
+                                <h2 class="text-anime-style-2" data-cursor="-opaque">
+                                    <span class="en-text">Cultivating Beautiful Gardens <span> for Over Two Decades</span></span>
+                                    <span class="sq-text">Duke Kultivuar Kopshte të Bukura <span> për Mbi Dy Dekada</span></span>
+                                </h2>
+                                <p class="wow fadeInUp" data-wow-delay="0.25s">
+                                    <span class="en-text">Founded on a passion for horticulture and landscape design, Gjoka Gardens has been serving homeowners and businesses with exceptional outdoor solutions. Our team combines traditional gardening wisdom with modern techniques to create sustainable, beautiful landscapes that stand the test of time.</span>
+                                    <span class="sq-text">E themeluar mbi pasionin për hortikulturë dhe dizajn peizazhi, Gjoka Gardens ka shërbyer pronarë shtëpish dhe biznese me zgjidhje të jashtëzakonshme të jashtme. Ekipi ynë kombinon urtësinë tradicionale të kopshtarisë me teknika moderne për të krijuar peizazhe të qëndrueshme dhe të bukura që qëndrojnë me kalimin e kohës.</span>
+                                </p>
                             </div>
                             <!-- Section Title End -->
 
                             <!-- About Us Body Start -->
-                            <div class="about-us-body wow fadeInUp"
-                                data-wow-delay="0.5s">
+                            <div class="about-us-body wow fadeInUp" data-wow-delay="0.5s">
                                 <ul>
-                                    <li>We Are Experience Gardeing</li>
-                                    <li>We Are Experience Gardeing</li>
-                                    <li>We Adapt Your Need</li>
-                                    <li>We Adapt Your Need</li>
+                                    <li>
+                                        <span class="en-text">We Are Experienced Gardening</span>
+                                        <span class="sq-text">Jemi të Përvojshëm në Kopshtari</span>
+                                    </li>
+                                    <li>
+                                        <span class="en-text">We Are Professional Team</span>
+                                        <span class="sq-text">Jemi Ekip Profesional</span>
+                                    </li>
+                                    <li>
+                                        <span class="en-text">We Adapt Your Needs</span>
+                                        <span class="sq-text">Ne Përshtatemi me Nevojat Tuaja</span>
+                                    </li>
+                                    <li>
+                                        <span class="en-text">Quality Guaranteed</span>
+                                        <span class="sq-text">Cilësi të Garantuar</span>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- About Us Body End -->
@@ -228,9 +311,10 @@
                     <div class="col-lg-6">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h2 class="text-anime-style-2"
-                                data-cursor="-opaque">Garden landscaping
-                                <span>services for every need</span></h2>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">
+                                <span class="en-text">Garden landscaping <span>services for every need</span></span>
+                                <span class="sq-text">Shërbime peizazhi kopshti <span>për çdo nevojë</span></span>
+                            </h2>
                         </div>
                         <!-- Section Title End -->
                     </div>
@@ -238,13 +322,10 @@
                     <div class="col-lg-6">
                         <!-- Section Title Content Start -->
                         <div class="section-title-content">
-                            <p class="wow fadeInUp"
-                                data-wow-delay="0.25s">Enhance your outdoor
-                                space with our professional garden landscaping
-                                services, customized to suit every need and
-                                preference. From design to installation, we
-                                create beautiful, functional gardens that
-                                reflect your style.</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.25s">
+                                <span class="en-text">From initial design concepts to ongoing maintenance, we offer complete landscaping solutions tailored to your space, budget, and lifestyle. Our experienced team handles every aspect of your outdoor transformation with professionalism and care.</span>
+                                <span class="sq-text">Nga konceptet fillestare të dizajnit deri te mirëmbajtja e vazhdueshme, ne ofrojmë zgjidhje të plota peizazhi të përshtatura me hapësirën, buxhetin dhe stilin tuaj të jetesës. Ekipi ynë i përvojshëm trajton çdo aspekt të transformimit tuaj të jashtëm me profesionalizëm dhe kujdes.</span>
+                            </p>
                         </div>
                         <!-- Section Title Content End -->
                     </div>
@@ -258,9 +339,7 @@
                             <div class="service-image">
                                 <a href="#">
                                     <figure>
-                                        <img
-                                            src="https://scontent.ftia21-1.fna.fbcdn.net/v/t39.30808-6/448497176_18061149394578459_4933888696951885950_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=G1Ua4a8XagIQ7kNvwHqT2Iz&_nc_oc=AdmBE_IXxnFwr-8TbYxfoh6B7Ed1L84qnHx3XZ2Ypr_sVbi9naEJ9yN-T4RWzvhQ3tc&_nc_zt=23&se=-1&_nc_ht=scontent.ftia21-1.fna&_nc_gid=NVJiMzQl0zq1Te-vJtjc3g&oh=00_AfLqkAm-5jljwPBnGjRDonK2S0GqJ-IpRHJwwmJ1sIIfaQ&oe=683931A4"
-                                            alt>
+                                        <img src="/images/landscape.jpg" alt>
                                     </figure>
                                 </a>
                             </div>
@@ -268,7 +347,10 @@
 
                             <!-- Service Title Start -->
                             <div class="service-title">
-                                <h3>landscape design</h3>
+                                <h3>
+                                    <span class="en-text">landscape design</span>
+                                    <span class="sq-text">dizajn peizazhi</span>
+                                </h3>
                             </div>
                             <!-- Service Title End -->
 
@@ -276,8 +358,10 @@
                             <div class="service-body">
                                 <!-- Service Content Start -->
                                 <div class="service-content">
-                                    <p>Durable, stylish hardscaping for
-                                        functional outdoor spaces.</p>
+                                    <p>
+                                        <span class="en-text">Durable, stylish hardscaping for functional outdoor spaces.</span>
+                                        <span class="sq-text">Peizazh i qëndrueshëm dhe elegant për hapësira funksionale të jashtme.</span>
+                                    </p>
                                 </div>
                                 <!-- Service Content End -->
 
@@ -296,15 +380,12 @@
 
                     <div class="col-lg-4 col-md-6">
                         <!-- Service Item Start -->
-                        <div class="service-item wow fadeInUp"
-                            data-wow-delay="0.25s">
+                        <div class="service-item wow fadeInUp" data-wow-delay="0.25s">
                             <!-- Service Image Start -->
                             <div class="service-image">
                                 <a href="#">
                                     <figure>
-                                        <img
-                                            src="https://scontent.ftia21-1.fna.fbcdn.net/v/t39.30808-6/482233319_1223817782540097_8163755980438447863_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Nd9oqaCol-sQ7kNvwFc3IiB&_nc_oc=AdltjmjbpU5AtOkaga6Z9uv5JGk2RxwU0bz7Z0fv5wsyW5fg8BceWOD6Fzgshf9NbXA&_nc_zt=23&_nc_ht=scontent.ftia21-1.fna&_nc_gid=5ddjXBBfTXTRhXdBJ-WV8A&oh=00_AfIPKWyE6ximjxx8SF89Fb-4dT5Pc5ZZAzgOx8990Ws9dg&oe=6839345B"
-                                            alt>
+                                        <img src="/images/garden.jpg" alt>
                                     </figure>
                                 </a>
                             </div>
@@ -312,7 +393,10 @@
 
                             <!-- Service Title Start -->
                             <div class="service-title">
-                                <h3>garden installation</h3>
+                                <h3>
+                                    <span class="en-text">garden installation</span>
+                                    <span class="sq-text">instalim kopshti</span>
+                                </h3>
                             </div>
                             <!-- Service Title End -->
 
@@ -320,8 +404,10 @@
                             <div class="service-body">
                                 <!-- Service Content Start -->
                                 <div class="service-content">
-                                    <p>Durable, stylish hardscaping for
-                                        functional outdoor spaces.</p>
+                                    <p>
+                                        <span class="en-text">Professional garden installation with attention to detail and quality.</span>
+                                        <span class="sq-text">Instalim profesional kopshti me vëmendje ndaj detajeve dhe cilësisë.</span>
+                                    </p>
                                 </div>
                                 <!-- Service Content End -->
 
@@ -340,15 +426,12 @@
 
                     <div class="col-lg-4 col-md-6">
                         <!-- Service Item Start -->
-                        <div class="service-item wow fadeInUp"
-                            data-wow-delay="0.5s">
+                        <div class="service-item wow fadeInUp" data-wow-delay="0.5s">
                             <!-- Service Image Start -->
                             <div class="service-image">
                                 <a href="#">
                                     <figure>
-                                        <img
-                                            src="https://scontent.ftia21-1.fna.fbcdn.net/v/t39.30808-6/481800751_1216454156609793_4400563910789477412_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=TpFEZmnUnpYQ7kNvwExiL-J&_nc_oc=AdmfZs-ATrvqMD6exL9lrUgKCX3IVEuWiC8l2-i7W9i5X9myg3K1gd052O5kSUIR9bE&_nc_zt=23&_nc_ht=scontent.ftia21-1.fna&_nc_gid=tLoYhuSa5635EVV5NRzr5w&oh=00_AfKzS2MBS4C8lifpHD8WKuUH79L90CgGWpgA2RICrW1nUA&oe=683942FA"
-                                            alt>
+                                        <img src="images/lawn.jpg" alt>
                                     </figure>
                                 </a>
                             </div>
@@ -356,7 +439,10 @@
 
                             <!-- Service Title Start -->
                             <div class="service-title">
-                                <h3>lawn care & maintenance</h3>
+                                <h3>
+                                    <span class="en-text">Green city</span>
+                                    <span class="sq-text">Qytet me i gjelbert</span>
+                                </h3>
                             </div>
                             <!-- Service Title End -->
 
@@ -364,8 +450,10 @@
                             <div class="service-body">
                                 <!-- Service Content Start -->
                                 <div class="service-content">
-                                    <p>Durable, stylish hardscaping for
-                                        functional outdoor spaces.</p>
+                                    <p>
+                                        <span class="en-text">Design and implementation of green spaces in the city.</span>
+                                        <span class="sq-text">Disenjim dhe implementim i vendeve te gjelberta ne qytet.</span>
+                                    </p>
                                 </div>
                                 <!-- Service Content End -->
 
@@ -386,7 +474,7 @@
         </div>
         <!-- Our Services Section End -->
 
-        <!-- Our Testiminial Start -->
+        <!-- Our Testimonial Start -->
         <div class="our-testimonials parallaxie">
             <div class="container">
                 <div class="row align-items-start">
@@ -394,9 +482,10 @@
                         <div class="testimonial-box">
                             <!-- Section Title Start -->
                             <div class="section-title">
-                                <h2 class="text-anime-style-2"
-                                    data-cursor="-opaque">Our happy <span>client
-                                        says</span></h2>
+                                <h2 class="text-anime-style-2" data-cursor="-opaque">
+                                    <span class="en-text">Our happy <span>client says</span></span>
+                                    <span class="sq-text">Klientët tanë <span>të kënaqur thonë</span></span>
+                                </h2>
                             </div>
                             <!-- Section Title End -->
 
@@ -409,28 +498,26 @@
                                             <div class="testimonial-item">
                                                 <div class="testimonial-header">
                                                     <div class="author-image">
-                                                        <figure
-                                                            class="image-anime">
-                                                            <img
-                                                                src="images/author-1.jpg"
-                                                                alt>
+                                                        <figure class="image-anime">
+                                                            <img src="images/author-1.jpg" alt>
                                                         </figure>
                                                     </div>
                                                     <div class="author-content">
-                                                        <h3>annette black</h3>
-                                                        <p>Sr. Gardener</p>
+                                                        <h3>
+                                                            <span class="en-text">Aneta Hoxha</span>
+                                                            <span class="sq-text">Aneta Hoxha</span>
+                                                        </h3>
+                                                        <p>
+                                                            <span class="en-text">Gardener</span>
+                                                            <span class="sq-text">Kopshtare</span>
+                                                        </p>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="testimonial-content">
-                                                    <p>Our backyard has been
-                                                        completely transformed!
-                                                        The team was
-                                                        professional, attentive,
-                                                        and delivered beyond our
-                                                        expectations. the
-                                                        quality of work is
-                                                        outstanding.</p>
+                                                <div class="testimonial-content">
+                                                    <p>
+                                                        <span class="en-text">Our backyard has been completely transformed! The team was professional, attentive, and delivered beyond our expectations. The quality of work is outstanding.</span>
+                                                        <span class="sq-text">Kopshti ynë i pasëm është transformuar plotësisht! Ekipi ishte profesional, i vëmendshëm, dhe dorëzoi përtej pritshmërive tona. Cilësia e punës është e shkëlqyer.</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -441,28 +528,26 @@
                                             <div class="testimonial-item">
                                                 <div class="testimonial-header">
                                                     <div class="author-image">
-                                                        <figure
-                                                            class="image-anime">
-                                                            <img
-                                                                src="images/author-1.jpg"
-                                                                alt>
+                                                        <figure class="image-anime">
+                                                            <img src="images/author-1.jpg" alt>
                                                         </figure>
                                                     </div>
                                                     <div class="author-content">
-                                                        <h3>annette black</h3>
-                                                        <p>Sr. Gardener</p>
+                                                        <h3>
+                                                            <span class="en-text">Gjon Mulliri</span>
+                                                            <span class="sq-text">Gjon Mulliri</span>
+                                                        </h3>
+                                                        <p>
+                                                            <span class="en-text">Garden Owner</span>
+                                                            <span class="sq-text">Pronar Kopshti</span>
+                                                        </p>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="testimonial-content">
-                                                    <p>Our backyard has been
-                                                        completely transformed!
-                                                        The team was
-                                                        professional, attentive,
-                                                        and delivered beyond our
-                                                        expectations. the
-                                                        quality of work is
-                                                        outstanding.</p>
+                                                <div class="testimonial-content">
+                                                    <p>
+                                                        <span class="en-text">Excellent service and beautiful results. They understood exactly what we wanted and made it happen. Highly recommended!</span>
+                                                        <span class="sq-text">Shërbim i shkëlqyer dhe rezultate të bukura. Ata kuptuan saktësisht atë që donim dhe e realizuan. Rekomandohet shumë!</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -473,38 +558,34 @@
                                             <div class="testimonial-item">
                                                 <div class="testimonial-header">
                                                     <div class="author-image">
-                                                        <figure
-                                                            class="image-anime">
-                                                            <img
-                                                                src="images/author-1.jpg"
-                                                                alt>
+                                                        <figure class="image-anime">
+                                                            <img src="images/author-1.jpg" alt>
                                                         </figure>
                                                     </div>
                                                     <div class="author-content">
-                                                        <h3>annette black</h3>
-                                                        <p>Sr. Gardener</p>
+                                                        <h3>
+                                                            <span class="en-text">Sara Aliu</span>
+                                                            <span class="sq-text">Sara Aliu</span>
+                                                        </h3>
+                                                        <p>
+                                                            <span class="en-text">Homeowner</span>
+                                                            <span class="sq-text">Pronare Shtëpie</span>
+                                                        </p>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="testimonial-content">
-                                                    <p>Our backyard has been
-                                                        completely transformed!
-                                                        The team was
-                                                        professional, attentive,
-                                                        and delivered beyond our
-                                                        expectations. the
-                                                        quality of work is
-                                                        outstanding.</p>
+                                                <div class="testimonial-content">
+                                                    <p>
+                                                        <span class="en-text">Amazing transformation of our outdoor space. The attention to detail and quality of work exceeded all expectations.</span>
+                                                        <span class="sq-text">Transformim i mahnitshëm i hapësirës sonë të jashtme. Vëmendja ndaj detajeve dhe cilësia e punës tejkaloi të gjitha pritshmëritë.</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- Testimonial Slide End -->
                                     </div>
                                     <div class="testimonial-btn">
-                                        <div
-                                            class="testimonial-button-prev"></div>
-                                        <div
-                                            class="testimonial-button-next"></div>
+                                        <div class="testimonial-button-prev"></div>
+                                        <div class="testimonial-button-next"></div>
                                     </div>
                                 </div>
                             </div>
@@ -513,7 +594,7 @@
                 </div>
             </div>
         </div>
-        <!-- Our Testiminial End -->
+        <!-- Our Testimonial End -->
 
         <!-- Why choose Us Section Start -->
         <div class="why-choose-us">
@@ -523,9 +604,7 @@
                         <!-- Why choose Image Start -->
                         <div class="why-choose-image">
                             <figure>
-                                <img
-                                    src="https://scontent.ftia21-1.fna.fbcdn.net/v/t39.30808-6/470140173_1280846119925667_8120147181777344557_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=VMS82Em9EWIQ7kNvwH2kO3N&_nc_oc=AdlFWn1m_EIiwB0Y8rfPYjdYKRkxeIRtcgYBYGkSaofnNQ-1fo8dI_krnFZvRcqvMy4&_nc_zt=23&_nc_ht=scontent.ftia21-1.fna&_nc_gid=XyKs1O_jv6IvQNslzbz2oQ&oh=00_AfI1wX8tyRzqjQnfxGbXoeRgKzybmfd5q5Zo3uGHr7SCmg&oe=68392AA0"
-                                    alt>
+                                <img src="/images/whyus.jpg" />
                             </figure>
                         </div>
                         <!-- Why choose Image End -->
@@ -536,46 +615,51 @@
                         <div class="why-choose-content">
                             <!-- Section Title Start -->
                             <div class="section-title">
-                                <h2 class="text-anime-style-2"
-                                    data-cursor="-opaque">Why choose us
-                                    <span>for your landscaping
-                                        needs?</span></h2>
-                                <p class="wow fadeInUp"
-                                    data-wow-delay="0.25s">Choose us for expert
-                                    landscaping: personalized designs, quality
-                                    craftsmanship, and dedicated service to make
-                                    your outdoor space exceptional.</p>
+                                <h2 class="text-anime-style-2" data-cursor="-opaque">
+                                    <span class="en-text">Why choose us <span>for your landscaping needs?</span></span>
+                                    <span class="sq-text">Pse të na zgjidhni <span>për nevojat tuaja të peizazhit?</span></span>
+                                </h2>
+                                <p class="wow fadeInUp" data-wow-delay="0.25s">
+                                    <span class="en-text">Choose us for expert landscaping: personalized designs, quality craftsmanship, and dedicated service to make your outdoor space exceptional.</span>
+                                    <span class="sq-text">Na zgjidhni për peizazh eksperte: dizajne të personalizuara, artizanate cilësore, dhe shërbim të dedikuar për ta bërë hapësirën tuaj të jashtme të jashtëzakonshme.</span>
+                                </p>
                             </div>
                             <!-- Section Title End -->
 
                             <!-- Why choose Body Start -->
                             <div class="why-choose-body">
                                 <!-- Why choose Item Start -->
-                                <div class="why-choose-item wow fadeInUp"
-                                    data-wow-delay="0.5s">
+                                <div class="why-choose-item wow fadeInUp" data-wow-delay="0.5s">
                                     <div class="icon-box">
-                                        <img src="images/icon-why-choose-1.svg"
-                                            alt>
+                                        <img src="images/icon-why-choose-1.svg" alt>
                                     </div>
                                     <div class="why-choose-item-content">
-                                        <h3>expertise & experience</h3>
-                                        <p>Years of expertise in crafting
-                                            beautiful gardens.</p>
+                                        <h3>
+                                            <span class="en-text">expertise & experience</span>
+                                            <span class="sq-text">ekspertizë & përvojë</span>
+                                        </h3>
+                                        <p>
+                                            <span class="en-text">Years of expertise in crafting beautiful gardens.</span>
+                                            <span class="sq-text">Vite ekspertize në krijimin e kopshteve të bukura.</span>
+                                        </p>
                                     </div>
                                 </div>
                                 <!-- Why choose Item End -->
 
                                 <!-- Why choose Item Start -->
-                                <div class="why-choose-item wow fadeInUp"
-                                    data-wow-delay="0.5s">
+                                <div class="why-choose-item wow fadeInUp" data-wow-delay="0.75s">
                                     <div class="icon-box">
-                                        <img src="images/icon-why-choose-2.svg"
-                                            alt>
+                                        <img src="images/icon-why-choose-2.svg" alt>
                                     </div>
                                     <div class="why-choose-item-content">
-                                        <h3>high-ouality craftsmanship</h3>
-                                        <p>Top-notch craftsmanship with premium
-                                            materials and attention.</p>
+                                        <h3>
+                                            <span class="en-text">high-quality craftsmanship</span>
+                                            <span class="sq-text">artizanat cilësor</span>
+                                        </h3>
+                                        <p>
+                                            <span class="en-text">Top-notch craftsmanship with premium materials and attention.</span>
+                                            <span class="sq-text">Artizanat i shkëlqyer me materiale premium dhe vëmendje.</span>
+                                        </p>
                                     </div>
                                 </div>
                                 <!-- Why choose Item End -->
@@ -598,31 +682,26 @@
                         <div class="about-footer">
                             <!-- Footer Logo Start -->
                             <div class="footer-logo">
-                                <img src="images/gjoka.png" alt="Logo"
-                                    width="60"
-                                    height="55"> <span
-                                    class="logo-text">oka</span>
+                                <img src="images/gjoka.png" alt="Logo" width="60" height="55"> 
+                                <span class="logo-text">oka</span>
                             </div>
                             <!-- Footer Logo End -->
 
                             <!-- About Footer Content Start -->
                             <div class="about-footer-content">
-                                <p>Explore our curated collection of seeds and
-                                    plants.</p>
+                                <p>
+                                    <span class="en-text">Explore our curated collection of seeds and plants.</span>
+                                    <span class="sq-text">Eksploroni koleksionin tonë të kuruar të farave dhe bimëve.</span>
+                                </p>
                             </div>
                             <!-- Footer Social Links Start -->
                             <div class="footer-social-links">
                                 <ul>
-                                    <li><a
-                                            href="https://www.facebook.com/profile.php?id=100047356616821"><i
-                                                class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a
-                                            href="https://www.instagram.com/vellezerit.gjoka.shpk/?hl=en"><i
-                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/profile.php?id=100047356616821"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.instagram.com/vellezerit.gjoka.shpk/?hl=en"><i class="fa-brands fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                             <!-- Footer Social Links End -->
-
                         </div>
                         <!-- About Footer End -->
                     </div>
@@ -630,12 +709,35 @@
                     <div class="col-lg-3 col-md-4 col-6">
                         <!-- About Links Start -->
                         <div class="footer-links">
-                            <h3>explore</h3>
+                            <h3>
+                                <span class="en-text">explore</span>
+                                <span class="sq-text">eksploro</span>
+                            </h3>
                             <ul>
-                                <li><a href="index.html">home</a></li>
-                                <li><a href="gallery.html">gallery</a></li>
-                                <li><a href="about.html">about us</a></li>
-                                <li><a href="contact.html">contact us</a></li>
+                                <li>
+                                    <a href="index.html">
+                                        <span class="en-text">home</span>
+                                        <span class="sq-text">kryefaqja</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="gallery.html">
+                                        <span class="en-text">gallery</span>
+                                        <span class="sq-text">galeria</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="about.html">
+                                        <span class="en-text">about us</span>
+                                        <span class="sq-text">rreth nesh</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">
+                                        <span class="en-text">contact us</span>
+                                        <span class="sq-text">na kontaktoni</span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <!-- About Links End -->
@@ -644,9 +746,15 @@
                     <div class="col-lg-3 col-md-4 col-6">
                         <!-- Working Hours Start -->
                         <div class="working-hour">
-                            <h3>working hours</h3>
+                            <h3>
+                                <span class="en-text">working hours</span>
+                                <span class="sq-text">orët e punës</span>
+                            </h3>
                             <div class="working-hour-box">
-                                <p>Monday - Sunday</p>
+                                <p>
+                                    <span class="en-text">Monday - Sunday</span>
+                                    <span class="sq-text">E Hënë - E Diel</span>
+                                </p>
                                 <p>07.00 - 23.00</p>
                             </div>
                         </div>
@@ -658,14 +766,23 @@
                         <div class="footer-contact">
                             <!-- Footer Info Box Start -->
                             <div class="footer-info-box">
-                                <h3>address</h3>
-                                <p>Fushë Krujë, Albania</p>
+                                <h3>
+                                    <span class="en-text">address</span>
+                                    <span class="sq-text">adresa</span>
+                                </h3>
+                                <p>
+                                    <span class="en-text">Fushë Krujë, Albania</span>
+                                    <span class="sq-text">Fushë Krujë, Shqipëri</span>
+                                </p>
                             </div>
                             <!-- Footer Info Box End -->
 
                             <!-- Footer Info Box Start -->
                             <div class="footer-info-box">
-                                <h3>contact</h3>
+                                <h3>
+                                    <span class="en-text">contact</span>
+                                    <span class="sq-text">kontakt</span>
+                                </h3>
                                 <p>(+355) 68 203 4333</p>
                                 <p>andigjokashpk@gmail.com</p>
                             </div>
@@ -681,7 +798,10 @@
                         <div class="col-lg-6 col-md-6">
                             <!-- Footer Copyright Start -->
                             <div class="footer-copyright-text">
-                                <p>© Gjoka. All Rights Reserved.</p>
+                                <p>
+                                    <span class="en-text">© Gjoka. All Rights Reserved.</span>
+                                    <span class="sq-text">© Gjoka. Të gjitha të drejtat të rezervuara.</span>
+                                </p>
                             </div>
                             <!-- Footer Copyright End -->
                         </div>
@@ -702,6 +822,37 @@
             </div>
         </footer>
         <!-- Footer End -->
+
+        <!-- Language Switch Script -->
+        <script>
+            // Language switching functionality
+            function switchLanguage(lang) {
+                const htmlRoot = document.getElementById('html-root');
+                const enBtn = document.getElementById('en-btn');
+                const sqBtn = document.getElementById('sq-btn');
+                
+                // Set the language attribute
+                htmlRoot.setAttribute('lang', lang);
+                
+                // Update button states
+                if (lang === 'en') {
+                    enBtn.classList.add('active');
+                    sqBtn.classList.remove('active');
+                } else {
+                    sqBtn.classList.add('active');
+                    enBtn.classList.remove('active');
+                }
+                
+                // Save language preference to localStorage
+                localStorage.setItem('preferred-language', lang);
+            }
+            
+            // Load saved language preference on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                const savedLang = localStorage.getItem('preferred-language') || 'en';
+                switchLanguage(savedLang);
+            });
+        </script>
 
         <!-- Jquery Library File -->
         <script src="js/jquery-3.7.1.min.js"></script>

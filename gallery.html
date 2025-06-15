@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
   <head>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -32,6 +32,52 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
     <!-- Main Custom Css -->
     <link href="css/custom.css" rel="stylesheet" media="screen">
+
+    <style>
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 20px;
+        }
+        
+        .language-switcher button {
+            background: none;
+            border: 2px solid #4CAF50;
+            color: #4CAF50;
+            padding: 5px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        
+        .language-switcher button:hover,
+        .language-switcher button.active {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .language-switcher span {
+            color: #666;
+            font-size: 12px;
+        }
+        
+        @media (max-width: 991px) {
+            .language-switcher {
+                margin-left: 0;
+                margin-top: 15px;
+                justify-content: center;
+            }
+        }
+        
+        [lang]:not([lang="en"]) .en-text,
+        [lang]:not([lang="sq"]) .sq-text {
+            display: none;
+        }
+    </style>
   </head>
   <body>
     <!-- Preloader Start -->
@@ -59,23 +105,52 @@
             <div class="collapse navbar-collapse main-menu">
               <div class="nav-menu-wrapper">
                 <ul class="navbar-nav mr-auto" id="menu">
-                  <li class="nav-item"><a class="nav-link"
-                      href="./">Home</a></li>
-                  <li class="nav-item"><a class="nav-link"
-                      href="gallery.html">Gallery</a></li>
-                  <li class="nav-item"><a class="nav-link"
-                      href="about.html">About</a></li>
-                  <li class="nav-item"><a class="nav-link"
-                      href="contact.html">Contact</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./">
+                      <span class="en-text">Home</span>
+                      <span class="sq-text">Kryefaqja</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">
+                      <span class="en-text">Gallery</span>
+                      <span class="sq-text">Galeria</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">
+                      <span class="en-text">About</span>
+                      <span class="sq-text">Rreth Nesh</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                      <span class="en-text">Contact</span>
+                      <span class="sq-text">Kontakt</span>
+                    </a>
+                  </li>
                 </ul>
               </div>
+
+              <!-- Language Switcher Start -->
+              <div class="language-switcher">
+                <button onclick="switchLanguage('en')" id="en-btn"
+                  class="active">EN</button>
+                <span>|</span>
+                <button onclick="switchLanguage('sq')" id="sq-btn">SQ</button>
+              </div>
+              <!-- Language Switcher End -->
+
               <!-- Contact Now Box Start -->
               <div class="contact-now-box d-inline-flex">
                 <div class="icon-box">
                   <img src="images/icon-phone.svg" alt>
                 </div>
                 <div class="contact-now-box-content">
-                  <p>call us any time</p>
+                  <p>
+                    <span class="en-text">call us any time</span>
+                    <span class="sq-text">na telefononi çdo kohë</span>
+                  </p>
                   <h3>(+01) 789 987 645</h3>
                 </div>
               </div>
@@ -97,14 +172,22 @@
           <div class="col-lg-12">
             <!-- Page Header Box Start -->
             <div class="page-header-box">
-              <h1 class="text-anime-style-2"
-                data-cursor="-opaque">Gallery</h1>
+              <h1 class="text-anime-style-2" data-cursor="-opaque">
+                <span class="en-text">Gallery</span>
+                <span class="sq-text">Galeria</span>
+              </h1>
               <nav class="wow fadeInUp">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a
-                      href="./">home</a></li>
-                  <li class="breadcrumb-item active"
-                    aria-current="page">gallery</li>
+                  <li class="breadcrumb-item">
+                    <a href="./">
+                      <span class="en-text">home</span>
+                      <span class="sq-text">kryefaqja</span>
+                    </a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <span class="en-text">gallery</span>
+                    <span class="sq-text">galeria</span>
+                  </li>
                 </ol>
               </nav>
             </div>
@@ -122,9 +205,12 @@
           <div class="col-lg-6">
             <!-- Section Title Start -->
             <div class="section-title">
-              <h2 class="text-anime-style-2"
-                data-cursor="-opaque">Our stunning garden
-                <span>landscaping projects</span></h2>
+              <h2 class="text-anime-style-2" data-cursor="-opaque">
+                <span class="en-text">Our stunning garden <span>landscaping
+                    projects</span></span>
+                <span class="sq-text">Projektet tona mahnitëse <span>të
+                    peizazhit të kopshtit</span></span>
+              </h2>
             </div>
             <!-- Section Title End -->
           </div>
@@ -133,12 +219,19 @@
             <!-- Section Title Content Start -->
             <div class="section-title-content wow fadeInUp"
               data-wow-delay="0.25s">
-              <p>Explore our stunning garden landscaping projects,
-                where creativity meets craftsmanship. We
-                transform ordinary spaces into extraordinary
-                outdoor retreats, tailored to your vision and
-                designed for lasting beauty and
-                functionality.</p>
+              <p>
+                <span class="en-text">Explore our stunning garden landscaping
+                  products and projects, where creativity meets craftsmanship. We transform
+                  ordinary spaces into extraordinary outdoor retreats, tailored
+                  to your vision and designed for lasting beauty and
+                  functionality.</span>
+                <span class="sq-text">Eksploroni produktet dhe projekted tona mahnitëse të
+                  peizazhit të kopshtit, ku kreativiteti takohet me artizanatin.
+                  Ne transformojmë hapësirat e zakonshme në strehime të
+                  jashtëzakonshme të jashtme, të përshtatura me vizionin tuaj
+                  dhe të dizajnuara për bukuri dhe funksionalitet të
+                  qëndrueshëm.</span>
+              </p>
             </div>
             <!-- Section Title Content End -->
           </div>
@@ -147,21 +240,38 @@
         <div class="row">
           <div class="col-lg-12 col-md-12">
             <!-- Choose Our Work Nav start -->
-            <div class="our-work-nav wow fadeInUp"
-              data-wow-delay="0.25s">
+            <div class="our-work-nav wow fadeInUp" data-wow-delay="0.25s">
               <ul>
-                <li><a href="#" class="active-btn"
-                    data-filter="*">all</a></li>
-                <li><a href="#"
-                    data-filter=".events">events</a></li>
-                <li><a href="#"
-                    data-filter=".gardens">gardens</a></li>
-                <li><a href="#"
-                    data-filter=".interiors">interiors</a></li>
-                <li><a href="#"
-                    data-filter=".maintance">maintance</a></li>
-                <li><a href="#"
-                    data-filter=".urban">urban</a></li>
+                <li>
+                  <a href="#" class="active-btn" data-filter="*">
+                    <span class="en-text">all</span>
+                    <span class="sq-text">të gjitha</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-filter=".flowers">
+                    <span class="en-text">Flowers</span>
+                    <span class="sq-text">Lule</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-filter=".trees">
+                    <span class="en-text">Trees</span>
+                    <span class="sq-text">Peme</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-filter=".transport">
+                    <span class="en-text">Transport</span>
+                    <span class="sq-text">Transport</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-filter=".urban">
+                    <span class="en-text">Urban</span>
+                    <span class="sq-text">Urban</span>
+                  </a>
+                </li>
               </ul>
             </div>
             <!-- Choose Our Work Nav End -->
@@ -169,197 +279,9 @@
 
           <div class="col-lg-12">
             <!-- Work Item Boxes start -->
-            <div class="row work-item-boxes align-items-center">
-              <div
-                class="col-lg-4 col-md-6 work-item-box events maintance">
-                <!-- Work Item Start -->
-                <div class="work-item wow fadeInUp">
-                  <div class="work-image"
-                    data-cursor-text="View">
-                    <a href="#">
-                      <figure>
-                        <img src="images/our-work-1.jpg"
-                          alt>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="work-body">
-                    <div class="work-content">
-                      <h3>Modern Urban Garden</h3>
-                      <p>Created a sleek, low-maintenance
-                        garden for a city home featuring
-                        contemporary design elements and
-                        vibrant plantings.</p>
-                    </div>
-                    <div class="work-readmore-btn">
-                      <a href="#"><img
-                          src="images/arrow-green.svg"
-                          alt></a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Work Item End -->
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 work-item-box gardens urban">
-                <!-- Work Item Start -->
-                <div class="work-item wow fadeInUp"
-                  data-wow-delay="0.2s">
-                  <div class="work-image"
-                    data-cursor-text="View">
-                    <a href="#">
-                      <figure>
-                        <img src="images/our-work-2.jpg"
-                          alt>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="work-body">
-                    <div class="work-content">
-                      <h3>Modern Urban Garden</h3>
-                      <p>Created a sleek, low-maintenance
-                        garden for a city home featuring
-                        contemporary design elements and
-                        vibrant plantings.</p>
-                    </div>
-                    <div class="work-readmore-btn">
-                      <a href="#"><img
-                          src="images/arrow-green.svg"
-                          alt></a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Work Item End -->
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 work-item-box interiors">
-                <!-- Work Item Start -->
-                <div class="work-item wow fadeInUp"
-                  data-wow-delay="0.4s">
-                  <div class="work-image"
-                    data-cursor-text="View">
-                    <a href="#">
-                      <figure>
-                        <img src="images/our-work-3.jpg"
-                          alt>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="work-body">
-                    <div class="work-content">
-                      <h3>Modern Urban Garden</h3>
-                      <p>Created a sleek, low-maintenance
-                        garden for a city home featuring
-                        contemporary design elements and
-                        vibrant plantings.</p>
-                    </div>
-                    <div class="work-readmore-btn">
-                      <a href="#"><img
-                          src="images/arrow-green.svg"
-                          alt></a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Work Item End -->
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 work-item-box events maintance">
-                <!-- Work Item Start -->
-                <div class="work-item wow fadeInUp"
-                  data-wow-delay="0.6s">
-                  <div class="work-image"
-                    data-cursor-text="View">
-                    <a href="#">
-                      <figure>
-                        <img src="images/our-work-4.jpg"
-                          alt>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="work-body">
-                    <div class="work-content">
-                      <h3>Modern Urban Garden</h3>
-                      <p>Created a sleek, low-maintenance
-                        garden for a city home featuring
-                        contemporary design elements and
-                        vibrant plantings.</p>
-                    </div>
-                    <div class="work-readmore-btn">
-                      <a href="#"><img
-                          src="images/arrow-green.svg"
-                          alt></a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Work Item End -->
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 work-item-box gardens service">
-                <!-- Project Item Start -->
-                <div class="work-item wow fadeInUp"
-                  data-wow-delay="0.8s">
-                  <div class="work-image"
-                    data-cursor-text="View">
-                    <a href="#">
-                      <figure>
-                        <img src="images/our-work-5.jpg"
-                          alt>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="work-body">
-                    <div class="work-content">
-                      <h3>Modern Urban Garden</h3>
-                      <p>Created a sleek, low-maintenance
-                        garden for a city home featuring
-                        contemporary design elements and
-                        vibrant plantings.</p>
-                    </div>
-                    <div class="work-readmore-btn">
-                      <a href="#"><img
-                          src="images/arrow-green.svg"
-                          alt></a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Work Item End -->
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 work-item-box interiors">
-                <!-- Work Item Start -->
-                <div class="work-item wow fadeInUp"
-                  data-wow-delay="1s">
-                  <div class="work-image"
-                    data-cursor-text="View">
-                    <a href="#">
-                      <figure>
-                        <img src="images/our-work-6.jpg"
-                          alt>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="work-body">
-                    <div class="work-content">
-                      <h3>Modern Urban Garden</h3>
-                      <p>Created a sleek, low-maintenance
-                        garden for a city home featuring
-                        contemporary design elements and
-                        vibrant plantings.</p>
-                    </div>
-                    <div class="work-readmore-btn">
-                      <a href="#"><img
-                          src="images/arrow-green.svg"
-                          alt></a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Work Item End -->
-              </div>
+            <div class="row work-item-boxes align-items-center"
+              id="gallery-container">
+              <!-- Gallery items will be dynamically generated here -->
             </div>
             <!-- Work Item Boxes End -->
           </div>
@@ -367,6 +289,7 @@
       </div>
     </div>
     <!-- Our Work Section End -->
+
     <!-- Footer Start -->
     <footer class="main-footer">
       <div class="container">
@@ -376,17 +299,19 @@
             <div class="about-footer">
               <!-- Footer Logo Start -->
               <div class="footer-logo">
-                <img src="images/gjoka.png" alt="Logo"
-                  width="60"
-                  height="55"> <span
-                  class="logo-text">oka</span>
+                <img src="images/gjoka.png" alt="Logo" width="60" height="55">
+                <span class="logo-text">oka</span>
               </div>
               <!-- Footer Logo End -->
 
               <!-- About Footer Content Start -->
               <div class="about-footer-content">
-                <p>Explore our curated collection of seeds and
-                  plants.</p>
+                <p>
+                  <span class="en-text">Explore our curated collection of seeds
+                    and plants.</span>
+                  <span class="sq-text">Eksploroni koleksionin tonë të kuruar të
+                    farave dhe bimëve.</span>
+                </p>
               </div>
               <!-- Footer Social Links Start -->
               <div class="footer-social-links">
@@ -400,7 +325,6 @@
                 </ul>
               </div>
               <!-- Footer Social Links End -->
-
             </div>
             <!-- About Footer End -->
           </div>
@@ -408,12 +332,35 @@
           <div class="col-lg-3 col-md-4 col-6">
             <!-- About Links Start -->
             <div class="footer-links">
-              <h3>explore</h3>
+              <h3>
+                <span class="en-text">explore</span>
+                <span class="sq-text">eksploro</span>
+              </h3>
               <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="gallery.html">gallery</a></li>
-                <li><a href="about.html">about us</a></li>
-                <li><a href="contact.html">contact us</a></li>
+                <li>
+                  <a href="index.html">
+                    <span class="en-text">home</span>
+                    <span class="sq-text">kryefaqja</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="gallery.html">
+                    <span class="en-text">gallery</span>
+                    <span class="sq-text">galeria</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html">
+                    <span class="en-text">about us</span>
+                    <span class="sq-text">rreth nesh</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="contact.html">
+                    <span class="en-text">contact us</span>
+                    <span class="sq-text">na kontaktoni</span>
+                  </a>
+                </li>
               </ul>
             </div>
             <!-- About Links End -->
@@ -422,9 +369,15 @@
           <div class="col-lg-3 col-md-4 col-6">
             <!-- Working Hours Start -->
             <div class="working-hour">
-              <h3>working hours</h3>
+              <h3>
+                <span class="en-text">working hours</span>
+                <span class="sq-text">orët e punës</span>
+              </h3>
               <div class="working-hour-box">
-                <p>Monday - Sunday</p>
+                <p>
+                  <span class="en-text">Monday - Sunday</span>
+                  <span class="sq-text">E Hënë - E Diel</span>
+                </p>
                 <p>07.00 - 23.00</p>
               </div>
             </div>
@@ -436,14 +389,23 @@
             <div class="footer-contact">
               <!-- Footer Info Box Start -->
               <div class="footer-info-box">
-                <h3>address</h3>
-                <p>Fushë Krujë, Albania</p>
+                <h3>
+                  <span class="en-text">address</span>
+                  <span class="sq-text">adresa</span>
+                </h3>
+                <p>
+                  <span class="en-text">Fushë Krujë, Albania</span>
+                  <span class="sq-text">Fushë Krujë, Shqipëri</span>
+                </p>
               </div>
               <!-- Footer Info Box End -->
 
               <!-- Footer Info Box Start -->
               <div class="footer-info-box">
-                <h3>contact</h3>
+                <h3>
+                  <span class="en-text">contact</span>
+                  <span class="sq-text">kontakt</span>
+                </h3>
                 <p>(+355) 68 203 4333</p>
                 <p>andigjokashpk@gmail.com</p>
               </div>
@@ -459,7 +421,11 @@
             <div class="col-lg-6 col-md-6">
               <!-- Footer Copyright Start -->
               <div class="footer-copyright-text">
-                <p>© Gjoka. All Rights Reserved.</p>
+                <p>
+                  <span class="en-text">© Gjoka. All Rights Reserved.</span>
+                  <span class="sq-text">© Gjoka. Të gjitha të drejtat të
+                    rezervuara.</span>
+                </p>
               </div>
               <!-- Footer Copyright End -->
             </div>
@@ -467,11 +433,11 @@
             <div class="col-lg-6 col-md-6">
               <!-- Footer Social Link Start -->
               <!-- <div class="footer-privacy-policy">
-                                <ul>
-                                    <li><a href="#">privacy policy</a></li>
-                                    <li><a href="#">terms & services</a></li>
-                                </ul>
-                            </div> -->
+                <ul>
+                  <li><a href="#">privacy policy</a></li>
+                  <li><a href="#">terms & services</a></li>
+                </ul>
+              </div> -->
               <!-- Footer Social Link End -->
             </div>
           </div>
@@ -480,6 +446,400 @@
       </div>
     </footer>
     <!-- Footer End -->
+
+    <!-- Language Switch Script -->
+    <script>
+        // Gallery data array
+        const galleryData = [
+            {
+                id: 1,
+                image: "images/flower-1.jpg",
+                categories: ["flowers"],
+                title: {
+                    en: "Flowers",
+                    sq: "Lule"
+                },
+                description: {
+                    en: "Create an elegant garden by using the variety of flowers we offer.",
+                    sq: "Krijoi një kopsht me elegant duke perdorur shumllojshmerine e luleve qe ofrojme ne."
+                },
+                link: "#"
+            },
+            {
+                id: 2,
+                image: "images/flower-2.jpg",
+                categories: ["flowers"],
+                title: {
+                    en: "Flowers",
+                    sq: "Lule"
+                },
+                description: {
+                    en: "Create an elegant garden by using the variety of flowers we offer.",
+                    sq: "Krijoi një kopsht me elegant duke perdorur shumllojshmerine e luleve qe ofrojme ne."
+                },
+                link: "#"
+            },
+            {
+                id: 3,
+                image: "images/flower-3.jpg",
+                categories: ["flowers"],
+                title: {
+                    en: "Flowers",
+                    sq: "Lule"
+                },
+                description: {
+                    en: "Create an elegant garden by using the variety of flowers we offer.",
+                    sq: "Krijoi një kopsht me elegant duke perdorur shumllojshmerine e luleve qe ofrojme ne."
+                },
+                link: "#"
+            },
+            {
+                id: 4,
+                image: "images/flower-4.jpg",
+                categories: ["flowers"],
+                title: {
+                    en: "Flowers",
+                    sq: "Lule"
+                },
+                description: {
+                    en: "Create an elegant garden by using the variety of flowers we offer.",
+                    sq: "Krijoi një kopsht me elegant duke perdorur shumllojshmerine e luleve qe ofrojme ne."
+                },
+                link: "#"
+            },
+            {
+                id: 5,
+                image: "images/flower-5.jpg",
+                categories: ["flowers"],
+                title: {
+                    en: "Flowers",
+                    sq: "Lule"
+                },
+                description: {
+                    en: "Create an elegant garden by using the variety of flowers we offer.",
+                    sq: "Krijoi një kopsht me elegant duke perdorur shumllojshmerine e luleve qe ofrojme ne."
+                },
+                link: "#"
+            },
+            {
+                id: 6,
+                image: "images/flower-6.jpg",
+                categories: ["flowers"],
+                title: {
+                    en: "Flowers",
+                    sq: "Lule"
+                },
+                description: {
+                    en: "Create an elegant garden by using the variety of flowers we offer.",
+                    sq: "Krijoi një kopsht me elegant duke perdorur shumllojshmerine e luleve qe ofrojme ne."
+                },
+                link: "#"
+            },
+            {
+                id: 7,
+                image: "images/peme-1.jpg",
+                categories: ["trees"],
+                title: {
+                    en: "Trees",
+                    sq: "Peme"
+                },
+                description: {
+                    en: "Give color and shade to your garden.",
+                    sq: "Jepi ngjyr dhe hije kopshtit tend."
+                },
+                link: "#"
+            },
+            {
+                id: 8,
+                image: "images/peme-2.jpg",
+                categories: ["trees"],
+                title: {
+                    en: "Trees",
+                    sq: "Peme"
+                },
+                description: {
+                    en: "Give color and shade to your garden.",
+                    sq: "Jepi ngjyr dhe hije kopshtit tend."
+                },
+                link: "#"
+            },
+            {
+                id: 9,
+                image: "images/peme-3.jpg",
+                categories: ["trees"],
+                title: {
+                    en: "Trees",
+                    sq: "Peme"
+                },
+                description: {
+                    en: "Give color and shade to your garden.",
+                    sq: "Jepi ngjyr dhe hije kopshtit tend."
+                },
+                link: "#"
+            },
+            {
+                id: 10,
+                image: "images/peme-4.jpg",
+                categories: ["trees"],
+                title: {
+                    en: "Trees",
+                    sq: "Peme"
+                },
+                description: {
+                    en: "Give color and shade to your garden.",
+                    sq: "Jepi ngjyr dhe hije kopshtit tend."
+                },
+                link: "#"
+            },
+            {
+                id: 11,
+                image: "images/peme-5.jpg",
+                categories: ["trees"],
+                title: {
+                    en: "Trees",
+                    sq: "Peme"
+                },
+                description: {
+                    en: "Give color and shade to your garden.",
+                    sq: "Jepi ngjyr dhe hije kopshtit tend."
+                },
+                link: "#"
+            },
+            {
+                id: 12,
+                image: "images/transport-1.jpg",
+                categories: ["transport"],
+                title: {
+                    en: "Transport",
+                    sq: "Transport"
+                },
+                description: {
+                    en: "We transport plants a trees, not only in Albania, but also abroad.",
+                    sq: "Ne transportojm lule dhe pemen, jo vetem ne Shqiperi, por edhe ne mbar boten."
+                },
+                link: "#"
+            },
+            {
+                id: 13,
+                image: "images/transport-2.jpg",
+                categories: ["transport"],
+                title: {
+                    en: "Transport",
+                    sq: "Transport"
+                },
+                description: {
+                    en: "We transport plants a trees, not only in Albania, but also abroad.",
+                    sq: "Ne transportojm lule dhe pemen, jo vetem ne Shqiperi, por edhe ne mbar boten."
+                },
+                link: "#"
+            },
+            {
+                id: 14,
+                image: "images/transport-3.jpg",
+                categories: ["transport"],
+                title: {
+                    en: "Transport",
+                    sq: "Transport"
+                },
+                description: {
+                    en: "We transport plants a trees, not only in Albania, but also abroad.",
+                    sq: "Ne transportojm lule dhe pemen, jo vetem ne Shqiperi, por edhe ne mbar boten."
+                },
+                link: "#"
+            },
+            {
+                id: 15,
+                image: "images/transport-4.jpg",
+                categories: ["transport"],
+                title: {
+                    en: "Transport",
+                    sq: "Transport"
+                },
+                description: {
+                    en: "We transport plants a trees, not only in Albania, but also abroad.",
+                    sq: "Ne transportojm lule dhe pemen, jo vetem ne Shqiperi, por edhe ne mbar boten."
+                },
+                link: "#"
+            },
+            {
+                id: 16,
+                image: "images/transport-5.jpg",
+                categories: ["transport"],
+                title: {
+                    en: "Transport",
+                    sq: "Transport"
+                },
+                description: {
+                    en: "We transport plants a trees, not only in Albania, but also abroad.",
+                    sq: "Ne transportojm lule dhe pemen, jo vetem ne Shqiperi, por edhe ne mbar boten."
+                },
+                link: "#"
+            },
+            {
+                id: 17,
+                image: "images/transport-6.jpg",
+                categories: ["transport"],
+                title: {
+                    en: "Transport",
+                    sq: "Transport"
+                },
+                description: {
+                    en: "We transport plants a trees, not only in Albania, but also abroad.",
+                    sq: "Ne transportojm lule dhe pemen, jo vetem ne Shqiperi, por edhe ne mbar boten."
+                },
+                link: "#"
+            },
+            {
+                id: 18,
+                image: "images/urban-1.jpg",
+                categories: ["urban"],
+                title: {
+                    en: "Urban work",
+                    sq: "Pune ne qytet"
+                },
+                description: {
+                    en: "",
+                    sq: ""
+                },
+                link: "#"
+            },
+            {
+                id: 19,
+                image: "images/urban-2.jpg",
+                categories: ["urban"],
+                title: {
+                    en: "Urban work",
+                    sq: "Pune ne qytet"
+                },
+                description: {
+                    en: "",
+                    sq: ""
+                },
+                link: "#"
+            },
+            {
+                id: 20,
+                image: "images/urban-3.jpg",
+                categories: ["urban"],
+                title: {
+                    en: "Urban work",
+                    sq: "Pune ne qytet"
+                },
+                description: {
+                    en: "",
+                    sq: ""
+                },
+                link: "#"
+            },
+        ];
+
+        // Function to generate gallery HTML
+        function generateGalleryHTML() {
+            const container = document.getElementById('gallery-container');
+            container.innerHTML = '';
+
+            galleryData.forEach((item, index) => {
+                const delay = (index % 6) * 0.2; // Stagger animation delays
+                const categoriesClass = item.categories.join(' ');
+                
+                const galleryItem = `
+                    <div class="col-lg-4 col-md-6 work-item-box ${categoriesClass}">
+                        <div class="work-item wow fadeInUp" data-wow-delay="${delay}s">
+                            <div class="work-image" data-cursor-text="View">
+                                <a href="${item.link}">
+                                    <figure>
+                                        <img src="${item.image}" alt="${item.title.en}" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="work-body">
+                                <div class="work-content">
+                                    <h3>
+                                        <span class="en-text">${item.title.en}</span>
+                                        <span class="sq-text">${item.title.sq}</span>
+                                    </h3>
+                                    <p>
+                                        <span class="en-text">${item.description.en}</span>
+                                        <span class="sq-text">${item.description.sq}</span>
+                                    </p>
+                                </div>
+                                <div class="work-readmore-btn">
+                                    <a href="${item.link}"><img src="images/arrow-green.svg" alt="Read more"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                container.innerHTML += galleryItem;
+            });
+
+            // Reinitialize Isotope after content is loaded
+            if (typeof $.fn.isotope !== 'undefined') {
+                setTimeout(() => {
+                    $('.work-item-boxes').isotope('reloadItems').isotope();
+                }, 100);
+            }
+
+            // Reinitialize WOW animations
+            if (typeof WOW !== 'undefined') {
+                new WOW().init();
+            }
+        }
+
+        // Language switching functionality
+        function switchLanguage(lang) {
+            const htmlRoot = document.getElementById('html-root');
+            const enBtn = document.getElementById('en-btn');
+            const sqBtn = document.getElementById('sq-btn');
+            
+            // Set the language attribute
+            htmlRoot.setAttribute('lang', lang);
+            
+            // Update button states
+            if (lang === 'en') {
+                enBtn.classList.add('active');
+                sqBtn.classList.remove('active');
+            } else {
+                sqBtn.classList.add('active');
+                enBtn.classList.remove('active');
+            }
+            
+            // Save language preference to localStorage
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // Function to add new gallery item (for easy management)
+        function addGalleryItem(newItem) {
+            galleryData.push(newItem);
+            generateGalleryHTML();
+        }
+
+        // Function to remove gallery item by ID
+        function removeGalleryItem(id) {
+            const index = galleryData.findIndex(item => item.id === id);
+            if (index > -1) {
+                galleryData.splice(index, 1);
+                generateGalleryHTML();
+            }
+        }
+
+        // Function to update gallery item
+        function updateGalleryItem(id, updatedData) {
+            const index = galleryData.findIndex(item => item.id === id);
+            if (index > -1) {
+                galleryData[index] = { ...galleryData[index], ...updatedData };
+                generateGalleryHTML();
+            }
+        }
+
+        // Load saved language preference and generate gallery on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferred-language') || 'en';
+            switchLanguage(savedLang);
+            generateGalleryHTML();
+        });
+    </script>
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
