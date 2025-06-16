@@ -10,10 +10,12 @@
         <meta name="author" content="Awaiken">
         <!-- Page Title -->
         <title>About - Vellezerit Gjoka</title>
-        <meta name="description" content="We are committed to sustainable practices, quality craftsmanship, and personalized service. Through careful plant selection, innovative design solutions, and eco-friendly maintenance practices, we ensure your garden not only looks stunning but also contributes positively to the environment while requiring minimal upkeep.">
+        <meta name="description"
+            content="We are committed to sustainable practices, quality craftsmanship, and personalized service. Through careful plant selection, innovative design solutions, and eco-friendly maintenance practices, we ensure your garden not only looks stunning but also contributes positively to the environment while requiring minimal upkeep.">
 
         <meta property="og:title" content="About - Vellezerit Gjoka">
-        <meta property="og:description" content="We are committed to sustainable practices, quality craftsmanship, and personalized service. Through careful plant selection, innovative design solutions, and eco-friendly maintenance practices, we ensure your garden not only looks stunning but also contributes positively to the environment while requiring minimal upkeep.">
+        <meta property="og:description"
+            content="We are committed to sustainable practices, quality craftsmanship, and personalized service. Through careful plant selection, innovative design solutions, and eco-friendly maintenance practices, we ensure your garden not only looks stunning but also contributes positively to the environment while requiring minimal upkeep.">
         <meta property="og:image" content="images/about-og.png">
 
         <!-- Favicon Icon -->
@@ -71,12 +73,28 @@
                 font-size: 12px;
             }
             
+            .mobile-switcher {
+                display: none;
+            }
+
+            .mobile-toggler {
+                display: none;
+            }
+            
             @media (max-width: 991px) {
-                .language-switcher {
-                    margin-left: 0;
-                    margin-top: 15px;
-                    justify-content: center;
+                .mobile-switcher {
+                    display: flex;
+                    /* justify-content: center; */
+                    margin-top: 10px;
                 }
+                .mobile-toggler {
+                    display: flex;
+                    align-items: center;
+                }
+                 .language-switcher {
+                    margin: 0;
+                    margin-right: 20px;
+                 }
             }
             
             [lang]:not([lang="en"]) .en-text,
@@ -169,7 +187,17 @@
                             <!-- Contact Now Box End -->
                         </div>
                         <!-- Main Menu End -->
-                        <div class="navbar-toggle"></div>
+                        <div class="mobile-toggler">
+                            <div class="language-switcher mobile-switcher">
+                                <button onclick="switchLanguage('en')"
+                                    id="en-btn"
+                                    class="active">EN</button>
+                                <span>|</span>
+                                <button onclick="switchLanguage('sq')"
+                                    id="sq-btn">SQ</button>
+                            </div>
+                            <div class="navbar-toggle"></div>
+                        </div>
                     </div>
                 </nav>
                 <div class="responsive-menu"></div>
@@ -329,12 +357,43 @@
                                             Kopshti</span></span>
                                 </h2>
                                 <p class="wow fadeInUp" data-wow-delay="0.25s">
-                                    <span class="en-text">Our mission is to transform ordinary outdoor spaces into extraordinary gardens that bring joy, beauty, and tranquility to your daily life. We believe every space has potential, regardless of size or condition.</span>
-                                    <span class="sq-text">Misioni ynë është të transformojmë hapësira të zakonshme të jashtme në kopshte të jashtëzakonshëm që sjellin gëzim, bukuri dhe qetësi në jetën tuaj të përditshme. Ne besojmë se çdo hapësirë ka potencial, pavarësisht nga madhësia apo gjendja.</span>
+                                    <span class="en-text">Our mission is to
+                                        transform ordinary outdoor spaces into
+                                        extraordinary gardens that bring joy,
+                                        beauty, and tranquility to your daily
+                                        life. We believe every space has
+                                        potential, regardless of size or
+                                        condition.</span>
+                                    <span class="sq-text">Misioni ynë është të
+                                        transformojmë hapësira të zakonshme të
+                                        jashtme në kopshte të jashtëzakonshëm që
+                                        sjellin gëzim, bukuri dhe qetësi në
+                                        jetën tuaj të përditshme. Ne besojmë se
+                                        çdo hapësirë ka potencial, pavarësisht
+                                        nga madhësia apo gjendja.</span>
                                 </p>
                                 <p class="wow fadeInUp" data-wow-delay="0.5s">
-                                    <span class="en-text">We are committed to sustainable practices, quality craftsmanship, and personalized service. Through careful plant selection, innovative design solutions, and eco-friendly maintenance practices, we ensure your garden not only looks stunning but also contributes positively to the environment while requiring minimal upkeep.</span>
-                                    <span class="sq-text">Ne jemi të përkushtuar ndaj praktikave të qëndrueshme, artizanatit cilësor dhe shërbimit të personalizuar. Përmes zgjedhjes së kujdesshme të bimëve, zgjidhjeve inovative të dizajnit dhe praktikave miqësore me mjedisin të mirëmbajtjes, sigurojmë që kopshti juaj jo vetëm të duket mahnitës por edhe të kontribuojë pozitivisht në mjedis duke kërkuar mirëmbajtje minimale.</span>
+                                    <span class="en-text">We are committed to
+                                        sustainable practices, quality
+                                        craftsmanship, and personalized service.
+                                        Through careful plant selection,
+                                        innovative design solutions, and
+                                        eco-friendly maintenance practices, we
+                                        ensure your garden not only looks
+                                        stunning but also contributes positively
+                                        to the environment while requiring
+                                        minimal upkeep.</span>
+                                    <span class="sq-text">Ne jemi të përkushtuar
+                                        ndaj praktikave të qëndrueshme,
+                                        artizanatit cilësor dhe shërbimit të
+                                        personalizuar. Përmes zgjedhjes së
+                                        kujdesshme të bimëve, zgjidhjeve
+                                        inovative të dizajnit dhe praktikave
+                                        miqësore me mjedisin të mirëmbajtjes,
+                                        sigurojmë që kopshti juaj jo vetëm të
+                                        duket mahnitës por edhe të kontribuojë
+                                        pozitivisht në mjedis duke kërkuar
+                                        mirëmbajtje minimale.</span>
                                 </p>
                             </div>
                             <!-- Section Title End -->
@@ -369,12 +428,45 @@
                                         <span>të Qëndrueshëm</span></span>
                                 </h2>
                                 <p class="wow fadeInUp" data-wow-delay="0.25s">
-                                    <span class="en-text">Our vision is to create outdoor living spaces that seamlessly blend with your lifestyle, providing areas for relaxation, entertainment, and connection with nature. Every garden we design reflects the unique personality and needs of our clients.</span>
-                                    <span class="sq-text">Vizioni ynë është të krijojmë hapësira jetese të jashtme që bashkohen pa probleme me stilin tuaj të jetesës, duke ofruar zona për relaksim, argëtim dhe lidhje me natyrën. Çdo kopsht që dizajnojmë reflekton personalitetin dhe nevojat unike të klientëve tanë.</span>
+                                    <span class="en-text">Our vision is to
+                                        create outdoor living spaces that
+                                        seamlessly blend with your lifestyle,
+                                        providing areas for relaxation,
+                                        entertainment, and connection with
+                                        nature. Every garden we design reflects
+                                        the unique personality and needs of our
+                                        clients.</span>
+                                    <span class="sq-text">Vizioni ynë është të
+                                        krijojmë hapësira jetese të jashtme që
+                                        bashkohen pa probleme me stilin tuaj të
+                                        jetesës, duke ofruar zona për relaksim,
+                                        argëtim dhe lidhje me natyrën. Çdo
+                                        kopsht që dizajnojmë reflekton
+                                        personalitetin dhe nevojat unike të
+                                        klientëve tanë.</span>
                                 </p>
                                 <p class="wow fadeInUp" data-wow-delay="0.5s">
-                                    <span class="en-text">We aim to be the leading garden design and maintenance company, known for our creativity, reliability, and commitment to excellence. Through innovative design approaches and sustainable practices, we strive to create gardens that not only meet today's needs but continue to evolve and thrive for generations to come.</span>
-                                    <span class="sq-text">Ne synojmë të jemi kompania kryesuese e dizajnit dhe mirëmbajtjes së kopshteve, e njohur për kreativitetin, besueshmërinë dhe përkushtimin tonë ndaj përsosmërisë. Përmes qasjeve inovative të dizajnit dhe praktikave të qëndrueshme, përpiqemi të krijojmë kopshte që jo vetëm plotësojnë nevojat e sotme por vazhdojnë të evoluojnë dhe lulëzojnë për breza me radhë.</span>
+                                    <span class="en-text">We aim to be the
+                                        leading garden design and maintenance
+                                        company, known for our creativity,
+                                        reliability, and commitment to
+                                        excellence. Through innovative design
+                                        approaches and sustainable practices, we
+                                        strive to create gardens that not only
+                                        meet today's needs but continue to
+                                        evolve and thrive for generations to
+                                        come.</span>
+                                    <span class="sq-text">Ne synojmë të jemi
+                                        kompania kryesuese e dizajnit dhe
+                                        mirëmbajtjes së kopshteve, e njohur për
+                                        kreativitetin, besueshmërinë dhe
+                                        përkushtimin tonë ndaj përsosmërisë.
+                                        Përmes qasjeve inovative të dizajnit dhe
+                                        praktikave të qëndrueshme, përpiqemi të
+                                        krijojmë kopshte që jo vetëm plotësojnë
+                                        nevojat e sotme por vazhdojnë të
+                                        evoluojnë dhe lulëzojnë për breza me
+                                        radhë.</span>
                                 </p>
                             </div>
                             <!-- Section Title End -->

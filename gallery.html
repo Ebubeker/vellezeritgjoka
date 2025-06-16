@@ -73,12 +73,28 @@
             font-size: 12px;
         }
         
+        .mobile-switcher {
+            display: none;
+        }
+
+        .mobile-toggler {
+            display: none;
+        }
+        
         @media (max-width: 991px) {
-            .language-switcher {
-                margin-left: 0;
-                margin-top: 15px;
-                justify-content: center;
+            .mobile-switcher {
+                display: flex;
+                /* justify-content: center; */
+                margin-top: 10px;
             }
+            .mobile-toggler {
+                display: flex;
+                align-items: center;
+            }
+              .language-switcher {
+                margin: 0;
+                margin-right: 20px;
+              }
         }
         
         [lang]:not([lang="en"]) .en-text,
@@ -165,7 +181,17 @@
               <!-- Contact Now Box End -->
             </div>
             <!-- Main Menu End -->
-            <div class="navbar-toggle"></div>
+            <div class="mobile-toggler">
+              <div class="language-switcher mobile-switcher">
+                <button onclick="switchLanguage('en')"
+                  id="en-btn"
+                  class="active">EN</button>
+                <span>|</span>
+                <button onclick="switchLanguage('sq')"
+                  id="sq-btn">SQ</button>
+              </div>
+              <div class="navbar-toggle"></div>
+            </div>
           </div>
         </nav>
         <div class="responsive-menu"></div>

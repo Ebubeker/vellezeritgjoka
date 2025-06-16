@@ -10,12 +10,13 @@
         <meta name="author" content="Awaiken">
         <!-- Page Title -->
         <title>Contact - Vellezerit Gjoka</title>
-        <meta name="description" content="Contact us for expert garden landscaping services. We are committed to sustainable practices, quality craftsmanship, and personalized service. Let us transform your outdoor space into a stunning, personalized oasis.">
+        <meta name="description"
+            content="Contact us for expert garden landscaping services. We are committed to sustainable practices, quality craftsmanship, and personalized service. Let us transform your outdoor space into a stunning, personalized oasis.">
 
         <meta property="og:title" content="Contact - Vellezerit Gjoka">
-        <meta property="og:description" content="Contact us for expert garden landscaping services. We are committed to sustainable practices, quality craftsmanship, and personalized service. Let us transform your outdoor space into a stunning, personalized oasis.">
+        <meta property="og:description"
+            content="Contact us for expert garden landscaping services. We are committed to sustainable practices, quality craftsmanship, and personalized service. Let us transform your outdoor space into a stunning, personalized oasis.">
         <meta property="og:image" content="images/contact-og.png">
-
 
         <!-- Favicon Icon -->
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
@@ -39,7 +40,7 @@
         <link rel="stylesheet" href="css/magnific-popup.css">
         <!-- Main Custom Css -->
         <link href="css/custom.css" rel="stylesheet" media="screen">
-        
+
         <style>
             .language-switcher {
                 display: flex;
@@ -72,12 +73,29 @@
                 font-size: 12px;
             }
             
+            
+            .mobile-switcher {
+                display: none;
+            }
+
+            .mobile-toggler {
+                display: none;
+            }
+            
             @media (max-width: 991px) {
-                .language-switcher {
-                    margin-left: 0;
-                    margin-top: 15px;
-                    justify-content: center;
+                .mobile-switcher {
+                    display: flex;
+                    /* justify-content: center; */
+                    margin-top: 10px;
                 }
+                .mobile-toggler {
+                    display: flex;
+                    align-items: center;
+                }
+                 .language-switcher {
+                    margin: 0;
+                    margin-right: 20px;
+                 }
             }
             
             [lang]:not([lang="en"]) .en-text,
@@ -151,7 +169,8 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="./">
                                             <span class="en-text">Home</span>
-                                            <span class="sq-text">Kryefaqja</span>
+                                            <span
+                                                class="sq-text">Kryefaqja</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -163,7 +182,8 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="about.html">
                                             <span class="en-text">About</span>
-                                            <span class="sq-text">Rreth Nesh</span>
+                                            <span class="sq-text">Rreth
+                                                Nesh</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -174,15 +194,17 @@
                                     </li>
                                 </ul>
                             </div>
-                            
+
                             <!-- Language Switcher Start -->
                             <div class="language-switcher">
-                                <button onclick="switchLanguage('en')" id="en-btn" class="active">EN</button>
+                                <button onclick="switchLanguage('en')"
+                                    id="en-btn" class="active">EN</button>
                                 <span>|</span>
-                                <button onclick="switchLanguage('sq')" id="sq-btn">SQ</button>
+                                <button onclick="switchLanguage('sq')"
+                                    id="sq-btn">SQ</button>
                             </div>
                             <!-- Language Switcher End -->
-                            
+
                             <!-- Contact Now Box Start -->
                             <div class="contact-now-box d-inline-flex">
                                 <div class="icon-box">
@@ -190,8 +212,10 @@
                                 </div>
                                 <div class="contact-now-box-content">
                                     <p>
-                                        <span class="en-text">call us any time</span>
-                                        <span class="sq-text">na telefononi çdo kohë</span>
+                                        <span class="en-text">call us any
+                                            time</span>
+                                        <span class="sq-text">na telefononi çdo
+                                            kohë</span>
                                     </p>
                                     <h3>(+01) 789 987 645</h3>
                                 </div>
@@ -199,7 +223,17 @@
                             <!-- Contact Now Box End -->
                         </div>
                         <!-- Main Menu End -->
-                        <div class="navbar-toggle"></div>
+                        <div class="mobile-toggler">
+                            <div class="language-switcher mobile-switcher">
+                                <button onclick="switchLanguage('en')"
+                                    id="en-btn"
+                                    class="active">EN</button>
+                                <span>|</span>
+                                <button onclick="switchLanguage('sq')"
+                                    id="sq-btn">SQ</button>
+                            </div>
+                            <div class="navbar-toggle"></div>
+                        </div>
                     </div>
                 </nav>
                 <div class="responsive-menu"></div>
@@ -214,7 +248,8 @@
                     <div class="col-lg-12">
                         <!-- Page Header Box Start -->
                         <div class="page-header-box">
-                            <h1 class="text-anime-style-2" data-cursor="-opaque">
+                            <h1 class="text-anime-style-2"
+                                data-cursor="-opaque">
                                 <span class="en-text">Contact Us</span>
                                 <span class="sq-text">Na Kontaktoni</span>
                             </h1>
@@ -223,10 +258,12 @@
                                     <li class="breadcrumb-item">
                                         <a href="./">
                                             <span class="en-text">home</span>
-                                            <span class="sq-text">kryefaqja</span>
+                                            <span
+                                                class="sq-text">kryefaqja</span>
                                         </a>
                                     </li>
-                                    <li class="breadcrumb-item active" aria-current="page">
+                                    <li class="breadcrumb-item active"
+                                        aria-current="page">
                                         <span class="en-text">contact</span>
                                         <span class="sq-text">kontakt</span>
                                     </li>
@@ -249,13 +286,25 @@
                         <div class="contact-us-form">
                             <!-- Section Title Start -->
                             <div class="section-title">
-                                <h2 class="text-anime-style-2" data-cursor="-opaque">
-                                    <span class="en-text">Get in Touch <span>for high quality gardens Today!</span></span>
-                                    <span class="sq-text">Kontaktoni <span>per kopshte me qualitet te lart qe Sot!</span></span>
+                                <h2 class="text-anime-style-2"
+                                    data-cursor="-opaque">
+                                    <span class="en-text">Get in Touch <span>for
+                                            high quality gardens
+                                            Today!</span></span>
+                                    <span class="sq-text">Kontaktoni <span>per
+                                            kopshte me qualitet te lart qe
+                                            Sot!</span></span>
                                 </h2>
                                 <p class="wow fadeInUp" data-wow-delay="0.25s">
-                                    <span class="en-text">Reach out today for expert garden landscaping services. Let us transform your outdoor space into a stunning, personalized oasis.</span>
-                                    <span class="sq-text">Kontaktoni sot për shërbime eksperte peizazhi kopshti. Lejojmë të transformojmë hapësirën tuaj të jashtme në një oaze mahnitëse dhe të personalizuar.</span>
+                                    <span class="en-text">Reach out today for
+                                        expert garden landscaping services. Let
+                                        us transform your outdoor space into a
+                                        stunning, personalized oasis.</span>
+                                    <span class="sq-text">Kontaktoni sot për
+                                        shërbime eksperte peizazhi kopshti.
+                                        Lejojmë të transformojmë hapësirën tuaj
+                                        të jashtme në një oaze mahnitëse dhe të
+                                        personalizuar.</span>
                                 </p>
                             </div>
                             <!-- Section Title End -->
@@ -263,38 +312,53 @@
                             <!-- Form Status Messages -->
                             <div id="form-messages"></div>
 
-                            <form id="contactForm" class="wow fadeInUp" data-wow-delay="0.5s">
+                            <form id="contactForm" class="wow fadeInUp"
+                                data-wow-delay="0.5s">
                                 <div class="row">
                                     <div class="form-group col-md-6 mb-4">
-                                        <input type="text" name="firstName" class="form-control" id="firstName" required>
+                                        <input type="text" name="firstName"
+                                            class="form-control" id="firstName"
+                                            required>
                                         <div class="invalid-feedback"></div>
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
-                                        <input type="text" name="lastName" class="form-control" id="lastName" required>
+                                        <input type="text" name="lastName"
+                                            class="form-control" id="lastName"
+                                            required>
                                         <div class="invalid-feedback"></div>
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
-                                        <input type="email" name="email" class="form-control" id="email" required>
+                                        <input type="email" name="email"
+                                            class="form-control" id="email"
+                                            required>
                                         <div class="invalid-feedback"></div>
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
-                                        <input type="tel" name="phone" class="form-control" id="phone" required>
+                                        <input type="tel" name="phone"
+                                            class="form-control" id="phone"
+                                            required>
                                         <div class="invalid-feedback"></div>
                                     </div>
 
                                     <div class="form-group col-md-12 mb-4">
-                                        <textarea name="message" class="form-control" id="message" rows="5" required></textarea>
+                                        <textarea name="message"
+                                            class="form-control" id="message"
+                                            rows="5" required></textarea>
                                         <div class="invalid-feedback"></div>
                                     </div>
 
                                     <div class="col-lg-12">
                                         <div class="contact-form-btn">
-                                            <button type="submit" class="btn-default btn-highlighted" id="submitBtn">
-                                                <span class="en-text">submit message</span>
-                                                <span class="sq-text">dërgo mesazhin</span>
+                                            <button type="submit"
+                                                class="btn-default btn-highlighted"
+                                                id="submitBtn">
+                                                <span class="en-text">submit
+                                                    message</span>
+                                                <span class="sq-text">dërgo
+                                                    mesazhin</span>
                                             </button>
                                         </div>
                                     </div>
@@ -316,18 +380,22 @@
                             <!-- Contact Information List Start -->
                             <div class="contact-info-list">
                                 <!-- Contact Info Item Start -->
-                                <div class="contact-info-item wow fadeInUp" data-wow-delay="0.25s">
+                                <div class="contact-info-item wow fadeInUp"
+                                    data-wow-delay="0.25s">
                                     <!-- Icon Box Start -->
                                     <div class="icon-box">
-                                        <img src="images/icon-contact-phone.svg" alt>
+                                        <img src="images/icon-contact-phone.svg"
+                                            alt>
                                     </div>
                                     <!-- Icon Box End -->
 
                                     <!-- Contact Info Content Start -->
                                     <div class="contact-info-content">
                                         <p>
-                                            <span class="en-text">give us a call</span>
-                                            <span class="sq-text">na telefononi</span>
+                                            <span class="en-text">give us a
+                                                call</span>
+                                            <span class="sq-text">na
+                                                telefononi</span>
                                         </p>
                                         <h3>(+355) 68 203 4333</h3>
                                     </div>
@@ -336,18 +404,22 @@
                                 <!-- Contact Info Item End -->
 
                                 <!-- Contact Info Item Start -->
-                                <div class="contact-info-item wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="contact-info-item wow fadeInUp"
+                                    data-wow-delay="0.5s">
                                     <!-- Icon Box Start -->
                                     <div class="icon-box">
-                                        <img src="images/icon-contact-mail.svg" alt>
+                                        <img src="images/icon-contact-mail.svg"
+                                            alt>
                                     </div>
                                     <!-- Icon Box End -->
 
                                     <!-- Contact Info Content Start -->
                                     <div class="contact-info-content">
                                         <p>
-                                            <span class="en-text">Send us a message</span>
-                                            <span class="sq-text">Dërgoni një mesazh</span>
+                                            <span class="en-text">Send us a
+                                                message</span>
+                                            <span class="sq-text">Dërgoni një
+                                                mesazh</span>
                                         </p>
                                         <h3>andigjokashpk@gmail.com</h3>
                                     </div>
@@ -356,22 +428,29 @@
                                 <!-- Contact Info Item End -->
 
                                 <!-- Contact Info Item Start -->
-                                <div class="contact-info-item wow fadeInUp" data-wow-delay="0.75s">
+                                <div class="contact-info-item wow fadeInUp"
+                                    data-wow-delay="0.75s">
                                     <!-- Icon Box Start -->
                                     <div class="icon-box">
-                                        <img src="images/icon-contact-location.svg" alt>
+                                        <img
+                                            src="images/icon-contact-location.svg"
+                                            alt>
                                     </div>
                                     <!-- Icon Box End -->
 
                                     <!-- Contact Info Content Start -->
                                     <div class="contact-info-content">
                                         <p>
-                                            <span class="en-text">Visit our location</span>
-                                            <span class="sq-text">Vizitoni vendndodhjen tonë</span>
+                                            <span class="en-text">Visit our
+                                                location</span>
+                                            <span class="sq-text">Vizitoni
+                                                vendndodhjen tonë</span>
                                         </p>
                                         <h3>
-                                            <span class="en-text">Fushë Krujë, Albania</span>
-                                            <span class="sq-text">Fushë Krujë, Shqipëri</span>
+                                            <span class="en-text">Fushë Krujë,
+                                                Albania</span>
+                                            <span class="sq-text">Fushë Krujë,
+                                                Shqipëri</span>
                                         </h3>
                                     </div>
                                     <!-- Contact Info Content End -->
@@ -415,7 +494,8 @@
                         <div class="about-footer">
                             <!-- Footer Logo Start -->
                             <div class="footer-logo">
-                                <img src="images/gjoka.png" alt="Logo" width="60" height="55"> 
+                                <img src="images/gjoka.png" alt="Logo"
+                                    width="60" height="55">
                                 <span class="logo-text">oka</span>
                             </div>
                             <!-- Footer Logo End -->
@@ -423,15 +503,22 @@
                             <!-- About Footer Content Start -->
                             <div class="about-footer-content">
                                 <p>
-                                    <span class="en-text">Explore our curated collection of seeds and plants.</span>
-                                    <span class="sq-text">Eksploroni koleksionin tonë të kuruar të farave dhe bimëve.</span>
+                                    <span class="en-text">Explore our curated
+                                        collection of seeds and plants.</span>
+                                    <span class="sq-text">Eksploroni koleksionin
+                                        tonë të kuruar të farave dhe
+                                        bimëve.</span>
                                 </p>
                             </div>
                             <!-- Footer Social Links Start -->
                             <div class="footer-social-links">
                                 <ul>
-                                    <li><a href="https://www.facebook.com/profile.php?id=100047356616821"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="https://www.instagram.com/vellezerit.gjoka.shpk/?hl=en"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a
+                                            href="https://www.facebook.com/profile.php?id=100047356616821"><i
+                                                class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a
+                                            href="https://www.instagram.com/vellezerit.gjoka.shpk/?hl=en"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                             <!-- Footer Social Links End -->
@@ -468,7 +555,8 @@
                                 <li>
                                     <a href="contact.html">
                                         <span class="en-text">contact us</span>
-                                        <span class="sq-text">na kontaktoni</span>
+                                        <span class="sq-text">na
+                                            kontaktoni</span>
                                     </a>
                                 </li>
                             </ul>
@@ -504,8 +592,10 @@
                                     <span class="sq-text">adresa</span>
                                 </h3>
                                 <p>
-                                    <span class="en-text">Fushë Krujë, Albania</span>
-                                    <span class="sq-text">Fushë Krujë, Shqipëri</span>
+                                    <span class="en-text">Fushë Krujë,
+                                        Albania</span>
+                                    <span class="sq-text">Fushë Krujë,
+                                        Shqipëri</span>
                                 </p>
                             </div>
                             <!-- Footer Info Box End -->
@@ -532,8 +622,10 @@
                             <!-- Footer Copyright Start -->
                             <div class="footer-copyright-text">
                                 <p>
-                                    <span class="en-text">© Gjoka. All Rights Reserved.</span>
-                                    <span class="sq-text">© Gjoka. Të gjitha të drejtat të rezervuara.</span>
+                                    <span class="en-text">© Gjoka. All Rights
+                                        Reserved.</span>
+                                    <span class="sq-text">© Gjoka. Të gjitha të
+                                        drejtat të rezervuara.</span>
                                 </p>
                             </div>
                             <!-- Footer Copyright End -->

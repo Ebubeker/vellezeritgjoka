@@ -10,10 +10,13 @@
         <meta name="author" content="Awaiken">
         <!-- Page Title -->
         <title>Vellezerit Gjoka - Gardening and Landscape</title>
-        <meta name="description" content="Vellezerit Gjoka is a leading gardening and landscape company with over 20 years of experience in creating beautiful outdoor spaces.">
+        <meta name="description"
+            content="Vellezerit Gjoka is a leading gardening and landscape company with over 20 years of experience in creating beautiful outdoor spaces.">
 
-        <meta property="og:title" content="Vellezerit Gjoka - Gardening and Landscape">
-        <meta property="og:description" content="Vellezerit Gjoka is a leading gardening and landscape company with over 20 years of experience in creating beautiful outdoor spaces.">
+        <meta property="og:title"
+            content="Vellezerit Gjoka - Gardening and Landscape">
+        <meta property="og:description"
+            content="Vellezerit Gjoka is a leading gardening and landscape company with over 20 years of experience in creating beautiful outdoor spaces.">
         <meta property="og:image" content="images/og.png">
 
         <!-- Favicon Icon -->
@@ -38,7 +41,7 @@
         <link rel="stylesheet" href="css/magnific-popup.css">
         <!-- Main Custom Css -->
         <link href="css/custom.css" rel="stylesheet" media="screen">
-        
+
         <style>
             .language-switcher {
                 display: flex;
@@ -70,13 +73,29 @@
                 color: #666;
                 font-size: 12px;
             }
+
+            .mobile-switcher {
+                display: none;
+            }
+
+            .mobile-toggler {
+                display: none;
+            }
             
             @media (max-width: 991px) {
-                .language-switcher {
-                    margin-left: 0;
-                    margin-top: 15px;
-                    justify-content: center;
+                .mobile-switcher {
+                    display: flex;
+                    /* justify-content: center; */
+                    margin-top: 10px;
                 }
+                .mobile-toggler {
+                    display: flex;
+                    align-items: center;
+                }
+                 .language-switcher {
+                    margin: 0;
+                    margin-right: 20px;
+                 }
             }
             
             [lang]:not([lang="en"]) .en-text,
@@ -115,7 +134,8 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="./">
                                             <span class="en-text">Home</span>
-                                            <span class="sq-text">Kryefaqja</span>
+                                            <span
+                                                class="sq-text">Kryefaqja</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -127,7 +147,8 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="about.html">
                                             <span class="en-text">About</span>
-                                            <span class="sq-text">Rreth Nesh</span>
+                                            <span class="sq-text">Rreth
+                                                Nesh</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -138,15 +159,17 @@
                                     </li>
                                 </ul>
                             </div>
-                            
+
                             <!-- Language Switcher Start -->
                             <div class="language-switcher">
-                                <button onclick="switchLanguage('en')" id="en-btn" class="active">EN</button>
+                                <button onclick="switchLanguage('en')"
+                                    id="en-btn" class="active">EN</button>
                                 <span>|</span>
-                                <button onclick="switchLanguage('sq')" id="sq-btn">SQ</button>
+                                <button onclick="switchLanguage('sq')"
+                                    id="sq-btn">SQ</button>
                             </div>
                             <!-- Language Switcher End -->
-                            
+
                             <!-- Contact Now Box Start -->
                             <div class="contact-now-box d-inline-flex">
                                 <div class="icon-box">
@@ -154,8 +177,10 @@
                                 </div>
                                 <div class="contact-now-box-content">
                                     <p>
-                                        <span class="en-text">call us any time</span>
-                                        <span class="sq-text">na telefononi çdo kohë</span>
+                                        <span class="en-text">call us any
+                                            time</span>
+                                        <span class="sq-text">na telefononi çdo
+                                            kohë</span>
                                     </p>
                                     <h3>(+01) 789 987 645</h3>
                                 </div>
@@ -163,7 +188,16 @@
                             <!-- Contact Now Box End -->
                         </div>
                         <!-- Main Menu End -->
-                        <div class="navbar-toggle"></div>
+                         <div class="mobile-toggler">
+                             <div class="language-switcher mobile-switcher">
+                                 <button onclick="switchLanguage('en')" id="en-btn"
+                                     class="active">EN</button>
+                                 <span>|</span>
+                                 <button onclick="switchLanguage('sq')"
+                                     id="sq-btn">SQ</button>
+                             </div>
+                             <div class="navbar-toggle"></div>
+                         </div>
                     </div>
                 </nav>
                 <div class="responsive-menu"></div>
@@ -196,23 +230,41 @@
                             <!-- Section Title Start -->
                             <div class="section-title">
                                 <h3 class="wow fadeInUp">
-                                    <span class="en-text">beautiful garden</span>
+                                    <span class="en-text">beautiful
+                                        garden</span>
                                     <span class="sq-text">kopsht i bukur</span>
                                 </h3>
-                                <h1 class="text-anime-style-2" data-cursor="-opaque">
-                                    <span class="en-text"><span>Passion for</span> Nature!</span>
-                                    <span class="sq-text"><span>Pasioni per</span> Natyren!</span>
+                                <h1 class="text-anime-style-2"
+                                    data-cursor="-opaque">
+                                    <span class="en-text"><span>Passion
+                                            for</span> Nature!</span>
+                                    <span class="sq-text"><span>Pasioni
+                                            per</span> Natyren!</span>
                                 </h1>
                                 <p class="wow fadeInUp" data-wow-delay="0.25s">
-                                    <span class="en-text">With over 20 years of experience, Gjoka Gardens brings your outdoor vision to life. From intimate garden retreats to expansive landscape installations, we create beautiful, functional spaces that enhance your property and lifestyle.</span>
-                                    <span class="sq-text">Me mbi 20 vite përvojë, Gjoka Gardens e sjell vizionin tuaj të jashtëm në jetë. Nga kopshte të vogla intime deri te instalime të gjera peizazhi, ne krijojmë hapësira të bukura dhe funksionale që përmirësojnë pronën dhe stilin tuaj të jetesës.</span>
+                                    <span class="en-text">With over 20 years of
+                                        experience, Gjoka Gardens brings your
+                                        outdoor vision to life. From intimate
+                                        garden retreats to expansive landscape
+                                        installations, we create beautiful,
+                                        functional spaces that enhance your
+                                        property and lifestyle.</span>
+                                    <span class="sq-text">Me mbi 20 vite
+                                        përvojë, Gjoka Gardens e sjell vizionin
+                                        tuaj të jashtëm në jetë. Nga kopshte të
+                                        vogla intime deri te instalime të gjera
+                                        peizazhi, ne krijojmë hapësira të bukura
+                                        dhe funksionale që përmirësojnë pronën
+                                        dhe stilin tuaj të jetesës.</span>
                                 </p>
                             </div>
                             <!-- Section Title End -->
 
-                            <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="hero-content-body wow fadeInUp"
+                                data-wow-delay="0.5s">
                                 <a href="gallery.html" class="btn-default">
-                                    <span class="en-text">Checkout Gallery</span>
+                                    <span class="en-text">Checkout
+                                        Gallery</span>
                                     <span class="sq-text">Shiko Galerinë</span>
                                 </a>
                             </div>
@@ -254,8 +306,10 @@
                                 </div>
                                 <div class="company-experience-content">
                                     <p>
-                                        <span class="en-text">years of experience</span>
-                                        <span class="sq-text">Vite <br> experience</span>
+                                        <span class="en-text">years of
+                                            experience</span>
+                                        <span class="sq-text">Vite <br>
+                                            experience</span>
                                     </p>
                                 </div>
                             </div>
@@ -269,35 +323,66 @@
                         <div class="about-us-content">
                             <!-- Section Title Start -->
                             <div class="section-title">
-                                <h2 class="text-anime-style-2" data-cursor="-opaque">
-                                    <span class="en-text">Cultivating Beautiful Gardens <span> for Over Two Decades</span></span>
-                                    <span class="sq-text">Duke Kultivuar Kopshte të Bukura <span> për Mbi Dy Dekada</span></span>
+                                <h2 class="text-anime-style-2"
+                                    data-cursor="-opaque">
+                                    <span class="en-text">Cultivating Beautiful
+                                        Gardens <span> for Over Two
+                                            Decades</span></span>
+                                    <span class="sq-text">Duke Kultivuar Kopshte
+                                        të Bukura <span> për Mbi Dy
+                                            Dekada</span></span>
                                 </h2>
                                 <p class="wow fadeInUp" data-wow-delay="0.25s">
-                                    <span class="en-text">Founded on a passion for horticulture and landscape design, Gjoka Gardens has been serving homeowners and businesses with exceptional outdoor solutions. Our team combines traditional gardening wisdom with modern techniques to create sustainable, beautiful landscapes that stand the test of time.</span>
-                                    <span class="sq-text">E themeluar mbi pasionin për hortikulturë dhe dizajn peizazhi, Gjoka Gardens ka shërbyer pronarë shtëpish dhe biznese me zgjidhje të jashtëzakonshme të jashtme. Ekipi ynë kombinon urtësinë tradicionale të kopshtarisë me teknika moderne për të krijuar peizazhe të qëndrueshme dhe të bukura që qëndrojnë me kalimin e kohës.</span>
+                                    <span class="en-text">Founded on a passion
+                                        for horticulture and landscape design,
+                                        Gjoka Gardens has been serving
+                                        homeowners and businesses with
+                                        exceptional outdoor solutions. Our team
+                                        combines traditional gardening wisdom
+                                        with modern techniques to create
+                                        sustainable, beautiful landscapes that
+                                        stand the test of time.</span>
+                                    <span class="sq-text">E themeluar mbi
+                                        pasionin për hortikulturë dhe dizajn
+                                        peizazhi, Gjoka Gardens ka shërbyer
+                                        pronarë shtëpish dhe biznese me zgjidhje
+                                        të jashtëzakonshme të jashtme. Ekipi ynë
+                                        kombinon urtësinë tradicionale të
+                                        kopshtarisë me teknika moderne për të
+                                        krijuar peizazhe të qëndrueshme dhe të
+                                        bukura që qëndrojnë me kalimin e
+                                        kohës.</span>
                                 </p>
                             </div>
                             <!-- Section Title End -->
 
                             <!-- About Us Body Start -->
-                            <div class="about-us-body wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="about-us-body wow fadeInUp"
+                                data-wow-delay="0.5s">
                                 <ul>
                                     <li>
-                                        <span class="en-text">We Are Experienced Gardening</span>
-                                        <span class="sq-text">Jemi të Përvojshëm në Kopshtari</span>
+                                        <span class="en-text">We Are Experienced
+                                            Gardening</span>
+                                        <span class="sq-text">Jemi të Përvojshëm
+                                            në Kopshtari</span>
                                     </li>
                                     <li>
-                                        <span class="en-text">We Are Professional Team</span>
-                                        <span class="sq-text">Jemi Ekip Profesional</span>
+                                        <span class="en-text">We Are
+                                            Professional Team</span>
+                                        <span class="sq-text">Jemi Ekip
+                                            Profesional</span>
                                     </li>
                                     <li>
-                                        <span class="en-text">We Adapt Your Needs</span>
-                                        <span class="sq-text">Ne Përshtatemi me Nevojat Tuaja</span>
+                                        <span class="en-text">We Adapt Your
+                                            Needs</span>
+                                        <span class="sq-text">Ne Përshtatemi me
+                                            Nevojat Tuaja</span>
                                     </li>
                                     <li>
-                                        <span class="en-text">Quality Guaranteed</span>
-                                        <span class="sq-text">Cilësi të Garantuar</span>
+                                        <span class="en-text">Quality
+                                            Guaranteed</span>
+                                        <span class="sq-text">Cilësi të
+                                            Garantuar</span>
                                     </li>
                                 </ul>
                             </div>
@@ -317,9 +402,12 @@
                     <div class="col-lg-6">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">
-                                <span class="en-text">Garden landscaping <span>services for every need</span></span>
-                                <span class="sq-text">Shërbime peizazhi kopshti <span>për çdo nevojë</span></span>
+                            <h2 class="text-anime-style-2"
+                                data-cursor="-opaque">
+                                <span class="en-text">Garden landscaping
+                                    <span>services for every need</span></span>
+                                <span class="sq-text">Shërbime peizazhi kopshti
+                                    <span>për çdo nevojë</span></span>
                             </h2>
                         </div>
                         <!-- Section Title End -->
@@ -329,8 +417,21 @@
                         <!-- Section Title Content Start -->
                         <div class="section-title-content">
                             <p class="wow fadeInUp" data-wow-delay="0.25s">
-                                <span class="en-text">From initial design concepts to ongoing maintenance, we offer complete landscaping solutions tailored to your space, budget, and lifestyle. Our experienced team handles every aspect of your outdoor transformation with professionalism and care.</span>
-                                <span class="sq-text">Nga konceptet fillestare të dizajnit deri te mirëmbajtja e vazhdueshme, ne ofrojmë zgjidhje të plota peizazhi të përshtatura me hapësirën, buxhetin dhe stilin tuaj të jetesës. Ekipi ynë i përvojshëm trajton çdo aspekt të transformimit tuaj të jashtëm me profesionalizëm dhe kujdes.</span>
+                                <span class="en-text">From initial design
+                                    concepts to ongoing maintenance, we offer
+                                    complete landscaping solutions tailored to
+                                    your space, budget, and lifestyle. Our
+                                    experienced team handles every aspect of
+                                    your outdoor transformation with
+                                    professionalism and care.</span>
+                                <span class="sq-text">Nga konceptet fillestare
+                                    të dizajnit deri te mirëmbajtja e
+                                    vazhdueshme, ne ofrojmë zgjidhje të plota
+                                    peizazhi të përshtatura me hapësirën,
+                                    buxhetin dhe stilin tuaj të jetesës. Ekipi
+                                    ynë i përvojshëm trajton çdo aspekt të
+                                    transformimit tuaj të jashtëm me
+                                    profesionalizëm dhe kujdes.</span>
                             </p>
                         </div>
                         <!-- Section Title Content End -->
@@ -354,7 +455,8 @@
                             <!-- Service Title Start -->
                             <div class="service-title">
                                 <h3>
-                                    <span class="en-text">landscape design</span>
+                                    <span class="en-text">landscape
+                                        design</span>
                                     <span class="sq-text">dizajn peizazhi</span>
                                 </h3>
                             </div>
@@ -365,8 +467,12 @@
                                 <!-- Service Content Start -->
                                 <div class="service-content">
                                     <p>
-                                        <span class="en-text">Durable, stylish hardscaping for functional outdoor spaces.</span>
-                                        <span class="sq-text">Peizazh i qëndrueshëm dhe elegant për hapësira funksionale të jashtme.</span>
+                                        <span class="en-text">Durable, stylish
+                                            hardscaping for functional outdoor
+                                            spaces.</span>
+                                        <span class="sq-text">Peizazh i
+                                            qëndrueshëm dhe elegant për hapësira
+                                            funksionale të jashtme.</span>
                                     </p>
                                 </div>
                                 <!-- Service Content End -->
@@ -386,7 +492,8 @@
 
                     <div class="col-lg-4 col-md-6">
                         <!-- Service Item Start -->
-                        <div class="service-item wow fadeInUp" data-wow-delay="0.25s">
+                        <div class="service-item wow fadeInUp"
+                            data-wow-delay="0.25s">
                             <!-- Service Image Start -->
                             <div class="service-image">
                                 <a href="#">
@@ -400,8 +507,10 @@
                             <!-- Service Title Start -->
                             <div class="service-title">
                                 <h3>
-                                    <span class="en-text">garden installation</span>
-                                    <span class="sq-text">instalim kopshti</span>
+                                    <span class="en-text">garden
+                                        installation</span>
+                                    <span class="sq-text">instalim
+                                        kopshti</span>
                                 </h3>
                             </div>
                             <!-- Service Title End -->
@@ -411,8 +520,12 @@
                                 <!-- Service Content Start -->
                                 <div class="service-content">
                                     <p>
-                                        <span class="en-text">Professional garden installation with attention to detail and quality.</span>
-                                        <span class="sq-text">Instalim profesional kopshti me vëmendje ndaj detajeve dhe cilësisë.</span>
+                                        <span class="en-text">Professional
+                                            garden installation with attention
+                                            to detail and quality.</span>
+                                        <span class="sq-text">Instalim
+                                            profesional kopshti me vëmendje ndaj
+                                            detajeve dhe cilësisë.</span>
                                     </p>
                                 </div>
                                 <!-- Service Content End -->
@@ -432,7 +545,8 @@
 
                     <div class="col-lg-4 col-md-6">
                         <!-- Service Item Start -->
-                        <div class="service-item wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item wow fadeInUp"
+                            data-wow-delay="0.5s">
                             <!-- Service Image Start -->
                             <div class="service-image">
                                 <a href="#">
@@ -447,7 +561,8 @@
                             <div class="service-title">
                                 <h3>
                                     <span class="en-text">Green city</span>
-                                    <span class="sq-text">Qytet me i gjelbert</span>
+                                    <span class="sq-text">Qytet me i
+                                        gjelbert</span>
                                 </h3>
                             </div>
                             <!-- Service Title End -->
@@ -457,8 +572,12 @@
                                 <!-- Service Content Start -->
                                 <div class="service-content">
                                     <p>
-                                        <span class="en-text">Design and implementation of green spaces in the city.</span>
-                                        <span class="sq-text">Disenjim dhe implementim i vendeve te gjelberta ne qytet.</span>
+                                        <span class="en-text">Design and
+                                            implementation of green spaces in
+                                            the city.</span>
+                                        <span class="sq-text">Disenjim dhe
+                                            implementim i vendeve te gjelberta
+                                            ne qytet.</span>
                                     </p>
                                 </div>
                                 <!-- Service Content End -->
@@ -488,9 +607,12 @@
                         <div class="testimonial-box">
                             <!-- Section Title Start -->
                             <div class="section-title">
-                                <h2 class="text-anime-style-2" data-cursor="-opaque">
-                                    <span class="en-text">Our happy <span>client says</span></span>
-                                    <span class="sq-text">Klientët tanë <span>të kënaqur thonë</span></span>
+                                <h2 class="text-anime-style-2"
+                                    data-cursor="-opaque">
+                                    <span class="en-text">Our happy <span>client
+                                            says</span></span>
+                                    <span class="sq-text">Klientët tanë <span>të
+                                            kënaqur thonë</span></span>
                                 </h2>
                             </div>
                             <!-- Section Title End -->
@@ -504,25 +626,57 @@
                                             <div class="testimonial-item">
                                                 <div class="testimonial-header">
                                                     <div class="author-image">
-                                                        <figure class="image-anime">
-                                                            <img src="images/author-1.jpg" alt>
+                                                        <figure
+                                                            class="image-anime">
+                                                            <img
+                                                                src="images/author-1.jpg"
+                                                                alt>
                                                         </figure>
                                                     </div>
                                                     <div class="author-content">
                                                         <h3>
-                                                            <span class="en-text">Aneta Hoxha</span>
-                                                            <span class="sq-text">Aneta Hoxha</span>
+                                                            <span
+                                                                class="en-text">Aneta
+                                                                Hoxha</span>
+                                                            <span
+                                                                class="sq-text">Aneta
+                                                                Hoxha</span>
                                                         </h3>
                                                         <p>
-                                                            <span class="en-text">Gardener</span>
-                                                            <span class="sq-text">Kopshtare</span>
+                                                            <span
+                                                                class="en-text">Gardener</span>
+                                                            <span
+                                                                class="sq-text">Kopshtare</span>
                                                         </p>
                                                     </div>
                                                 </div>
-                                                <div class="testimonial-content">
+                                                <div
+                                                    class="testimonial-content">
                                                     <p>
-                                                        <span class="en-text">Our backyard has been completely transformed! The team was professional, attentive, and delivered beyond our expectations. The quality of work is outstanding.</span>
-                                                        <span class="sq-text">Kopshti ynë i pasëm është transformuar plotësisht! Ekipi ishte profesional, i vëmendshëm, dhe dorëzoi përtej pritshmërive tona. Cilësia e punës është e shkëlqyer.</span>
+                                                        <span
+                                                            class="en-text">Our
+                                                            backyard has been
+                                                            completely
+                                                            transformed! The
+                                                            team was
+                                                            professional,
+                                                            attentive, and
+                                                            delivered beyond our
+                                                            expectations. The
+                                                            quality of work is
+                                                            outstanding.</span>
+                                                        <span
+                                                            class="sq-text">Kopshti
+                                                            ynë i pasëm është
+                                                            transformuar
+                                                            plotësisht! Ekipi
+                                                            ishte profesional, i
+                                                            vëmendshëm, dhe
+                                                            dorëzoi përtej
+                                                            pritshmërive tona.
+                                                            Cilësia e punës
+                                                            është e
+                                                            shkëlqyer.</span>
                                                     </p>
                                                 </div>
                                             </div>
@@ -534,25 +688,54 @@
                                             <div class="testimonial-item">
                                                 <div class="testimonial-header">
                                                     <div class="author-image">
-                                                        <figure class="image-anime">
-                                                            <img src="images/author-1.jpg" alt>
+                                                        <figure
+                                                            class="image-anime">
+                                                            <img
+                                                                src="images/author-1.jpg"
+                                                                alt>
                                                         </figure>
                                                     </div>
                                                     <div class="author-content">
                                                         <h3>
-                                                            <span class="en-text">Gjon Mulliri</span>
-                                                            <span class="sq-text">Gjon Mulliri</span>
+                                                            <span
+                                                                class="en-text">Gjon
+                                                                Mulliri</span>
+                                                            <span
+                                                                class="sq-text">Gjon
+                                                                Mulliri</span>
                                                         </h3>
                                                         <p>
-                                                            <span class="en-text">Garden Owner</span>
-                                                            <span class="sq-text">Pronar Kopshti</span>
+                                                            <span
+                                                                class="en-text">Garden
+                                                                Owner</span>
+                                                            <span
+                                                                class="sq-text">Pronar
+                                                                Kopshti</span>
                                                         </p>
                                                     </div>
                                                 </div>
-                                                <div class="testimonial-content">
+                                                <div
+                                                    class="testimonial-content">
                                                     <p>
-                                                        <span class="en-text">Excellent service and beautiful results. They understood exactly what we wanted and made it happen. Highly recommended!</span>
-                                                        <span class="sq-text">Shërbim i shkëlqyer dhe rezultate të bukura. Ata kuptuan saktësisht atë që donim dhe e realizuan. Rekomandohet shumë!</span>
+                                                        <span
+                                                            class="en-text">Excellent
+                                                            service and
+                                                            beautiful results.
+                                                            They understood
+                                                            exactly what we
+                                                            wanted and made it
+                                                            happen. Highly
+                                                            recommended!</span>
+                                                        <span
+                                                            class="sq-text">Shërbim
+                                                            i shkëlqyer dhe
+                                                            rezultate të bukura.
+                                                            Ata kuptuan
+                                                            saktësisht atë që
+                                                            donim dhe e
+                                                            realizuan.
+                                                            Rekomandohet
+                                                            shumë!</span>
                                                     </p>
                                                 </div>
                                             </div>
@@ -564,25 +747,51 @@
                                             <div class="testimonial-item">
                                                 <div class="testimonial-header">
                                                     <div class="author-image">
-                                                        <figure class="image-anime">
-                                                            <img src="images/author-1.jpg" alt>
+                                                        <figure
+                                                            class="image-anime">
+                                                            <img
+                                                                src="images/author-1.jpg"
+                                                                alt>
                                                         </figure>
                                                     </div>
                                                     <div class="author-content">
                                                         <h3>
-                                                            <span class="en-text">Sara Aliu</span>
-                                                            <span class="sq-text">Sara Aliu</span>
+                                                            <span
+                                                                class="en-text">Sara
+                                                                Aliu</span>
+                                                            <span
+                                                                class="sq-text">Sara
+                                                                Aliu</span>
                                                         </h3>
                                                         <p>
-                                                            <span class="en-text">Homeowner</span>
-                                                            <span class="sq-text">Pronare Shtëpie</span>
+                                                            <span
+                                                                class="en-text">Homeowner</span>
+                                                            <span
+                                                                class="sq-text">Pronare
+                                                                Shtëpie</span>
                                                         </p>
                                                     </div>
                                                 </div>
-                                                <div class="testimonial-content">
+                                                <div
+                                                    class="testimonial-content">
                                                     <p>
-                                                        <span class="en-text">Amazing transformation of our outdoor space. The attention to detail and quality of work exceeded all expectations.</span>
-                                                        <span class="sq-text">Transformim i mahnitshëm i hapësirës sonë të jashtme. Vëmendja ndaj detajeve dhe cilësia e punës tejkaloi të gjitha pritshmëritë.</span>
+                                                        <span
+                                                            class="en-text">Amazing
+                                                            transformation of
+                                                            our outdoor space.
+                                                            The attention to
+                                                            detail and quality
+                                                            of work exceeded all
+                                                            expectations.</span>
+                                                        <span
+                                                            class="sq-text">Transformim
+                                                            i mahnitshëm i
+                                                            hapësirës sonë të
+                                                            jashtme. Vëmendja
+                                                            ndaj detajeve dhe
+                                                            cilësia e punës
+                                                            tejkaloi të gjitha
+                                                            pritshmëritë.</span>
                                                     </p>
                                                 </div>
                                             </div>
@@ -590,8 +799,10 @@
                                         <!-- Testimonial Slide End -->
                                     </div>
                                     <div class="testimonial-btn">
-                                        <div class="testimonial-button-prev"></div>
-                                        <div class="testimonial-button-next"></div>
+                                        <div
+                                            class="testimonial-button-prev"></div>
+                                        <div
+                                            class="testimonial-button-next"></div>
                                     </div>
                                 </div>
                             </div>
@@ -621,13 +832,27 @@
                         <div class="why-choose-content">
                             <!-- Section Title Start -->
                             <div class="section-title">
-                                <h2 class="text-anime-style-2" data-cursor="-opaque">
-                                    <span class="en-text">Why choose us <span>for your landscaping needs?</span></span>
-                                    <span class="sq-text">Pse të na zgjidhni <span>për nevojat tuaja të peizazhit?</span></span>
+                                <h2 class="text-anime-style-2"
+                                    data-cursor="-opaque">
+                                    <span class="en-text">Why choose us
+                                        <span>for your landscaping
+                                            needs?</span></span>
+                                    <span class="sq-text">Pse të na zgjidhni
+                                        <span>për nevojat tuaja të
+                                            peizazhit?</span></span>
                                 </h2>
                                 <p class="wow fadeInUp" data-wow-delay="0.25s">
-                                    <span class="en-text">Choose us for expert landscaping: personalized designs, quality craftsmanship, and dedicated service to make your outdoor space exceptional.</span>
-                                    <span class="sq-text">Na zgjidhni për peizazh eksperte: dizajne të personalizuara, artizanate cilësore, dhe shërbim të dedikuar për ta bërë hapësirën tuaj të jashtme të jashtëzakonshme.</span>
+                                    <span class="en-text">Choose us for expert
+                                        landscaping: personalized designs,
+                                        quality craftsmanship, and dedicated
+                                        service to make your outdoor space
+                                        exceptional.</span>
+                                    <span class="sq-text">Na zgjidhni për
+                                        peizazh eksperte: dizajne të
+                                        personalizuara, artizanate cilësore, dhe
+                                        shërbim të dedikuar për ta bërë
+                                        hapësirën tuaj të jashtme të
+                                        jashtëzakonshme.</span>
                                 </p>
                             </div>
                             <!-- Section Title End -->
@@ -635,36 +860,52 @@
                             <!-- Why choose Body Start -->
                             <div class="why-choose-body">
                                 <!-- Why choose Item Start -->
-                                <div class="why-choose-item wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="why-choose-item wow fadeInUp"
+                                    data-wow-delay="0.5s">
                                     <div class="icon-box">
-                                        <img src="images/icon-why-choose-1.svg" alt>
+                                        <img src="images/icon-why-choose-1.svg"
+                                            alt>
                                     </div>
                                     <div class="why-choose-item-content">
                                         <h3>
-                                            <span class="en-text">expertise & experience</span>
-                                            <span class="sq-text">ekspertizë & përvojë</span>
+                                            <span class="en-text">expertise &
+                                                experience</span>
+                                            <span class="sq-text">ekspertizë &
+                                                përvojë</span>
                                         </h3>
                                         <p>
-                                            <span class="en-text">Years of expertise in crafting beautiful gardens.</span>
-                                            <span class="sq-text">Vite ekspertize në krijimin e kopshteve të bukura.</span>
+                                            <span class="en-text">Years of
+                                                expertise in crafting beautiful
+                                                gardens.</span>
+                                            <span class="sq-text">Vite
+                                                ekspertize në krijimin e
+                                                kopshteve të bukura.</span>
                                         </p>
                                     </div>
                                 </div>
                                 <!-- Why choose Item End -->
 
                                 <!-- Why choose Item Start -->
-                                <div class="why-choose-item wow fadeInUp" data-wow-delay="0.75s">
+                                <div class="why-choose-item wow fadeInUp"
+                                    data-wow-delay="0.75s">
                                     <div class="icon-box">
-                                        <img src="images/icon-why-choose-2.svg" alt>
+                                        <img src="images/icon-why-choose-2.svg"
+                                            alt>
                                     </div>
                                     <div class="why-choose-item-content">
                                         <h3>
-                                            <span class="en-text">high-quality craftsmanship</span>
-                                            <span class="sq-text">artizanat cilësor</span>
+                                            <span class="en-text">high-quality
+                                                craftsmanship</span>
+                                            <span class="sq-text">artizanat
+                                                cilësor</span>
                                         </h3>
                                         <p>
-                                            <span class="en-text">Top-notch craftsmanship with premium materials and attention.</span>
-                                            <span class="sq-text">Artizanat i shkëlqyer me materiale premium dhe vëmendje.</span>
+                                            <span class="en-text">Top-notch
+                                                craftsmanship with premium
+                                                materials and attention.</span>
+                                            <span class="sq-text">Artizanat i
+                                                shkëlqyer me materiale premium
+                                                dhe vëmendje.</span>
                                         </p>
                                     </div>
                                 </div>
@@ -688,7 +929,8 @@
                         <div class="about-footer">
                             <!-- Footer Logo Start -->
                             <div class="footer-logo">
-                                <img src="images/gjoka.png" alt="Logo" width="60" height="55"> 
+                                <img src="images/gjoka.png" alt="Logo"
+                                    width="60" height="55">
                                 <span class="logo-text">oka</span>
                             </div>
                             <!-- Footer Logo End -->
@@ -696,15 +938,22 @@
                             <!-- About Footer Content Start -->
                             <div class="about-footer-content">
                                 <p>
-                                    <span class="en-text">Explore our curated collection of seeds and plants.</span>
-                                    <span class="sq-text">Eksploroni koleksionin tonë të kuruar të farave dhe bimëve.</span>
+                                    <span class="en-text">Explore our curated
+                                        collection of seeds and plants.</span>
+                                    <span class="sq-text">Eksploroni koleksionin
+                                        tonë të kuruar të farave dhe
+                                        bimëve.</span>
                                 </p>
                             </div>
                             <!-- Footer Social Links Start -->
                             <div class="footer-social-links">
                                 <ul>
-                                    <li><a href="https://www.facebook.com/profile.php?id=100047356616821"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="https://www.instagram.com/vellezerit.gjoka.shpk/?hl=en"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a
+                                            href="https://www.facebook.com/profile.php?id=100047356616821"><i
+                                                class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a
+                                            href="https://www.instagram.com/vellezerit.gjoka.shpk/?hl=en"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                             <!-- Footer Social Links End -->
@@ -741,7 +990,8 @@
                                 <li>
                                     <a href="contact.html">
                                         <span class="en-text">contact us</span>
-                                        <span class="sq-text">na kontaktoni</span>
+                                        <span class="sq-text">na
+                                            kontaktoni</span>
                                     </a>
                                 </li>
                             </ul>
@@ -777,8 +1027,10 @@
                                     <span class="sq-text">adresa</span>
                                 </h3>
                                 <p>
-                                    <span class="en-text">Fushë Krujë, Albania</span>
-                                    <span class="sq-text">Fushë Krujë, Shqipëri</span>
+                                    <span class="en-text">Fushë Krujë,
+                                        Albania</span>
+                                    <span class="sq-text">Fushë Krujë,
+                                        Shqipëri</span>
                                 </p>
                             </div>
                             <!-- Footer Info Box End -->
@@ -805,8 +1057,10 @@
                             <!-- Footer Copyright Start -->
                             <div class="footer-copyright-text">
                                 <p>
-                                    <span class="en-text">© Gjoka. All Rights Reserved.</span>
-                                    <span class="sq-text">© Gjoka. Të gjitha të drejtat të rezervuara.</span>
+                                    <span class="en-text">© Gjoka. All Rights
+                                        Reserved.</span>
+                                    <span class="sq-text">© Gjoka. Të gjitha të
+                                        drejtat të rezervuara.</span>
                                 </p>
                             </div>
                             <!-- Footer Copyright End -->
